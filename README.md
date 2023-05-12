@@ -1,4 +1,5 @@
 # AquaGoat
+
 Gaming platform design for web application.
 
 ## Key Features
@@ -14,10 +15,11 @@ Gaming platform design for web application.
 <br>
 <hr>
 
-## Specifications 
+## Specifications
+
 <p>In this unique platform game, players control a fascinating creature known as a Cabriella, navigating through underwater environments. The half goat/half siren swims from one point to another using its long, flexible body, encountering various challenges along the way. The sea is teeming with enemies that Cabriella must avoid using its abilities. Additionally, there are obstacles such as coral reefs, underwater currents, or treacherous sea creatures that pose threats to the sirengoat's progress. Players must skillfully swim, strategize, and react swiftly to overcome these obstacles, defeat enemies, and explore the captivating underwater world.</p>
 
-- [Javascript]([https://reactjs.org/](https://lenguajejs.com/javascript/introduccion/ecmascript/))
+- [Javascript](<[https://reactjs.org/](https://lenguajejs.com/javascript/introduccion/ecmascript/)>)
 - [SASS](https://sass-lang.com/)
 - [NETLIFY](https://www.netlify.com/)
 - [VITE](https://vitejs.dev/guide/)
@@ -25,31 +27,25 @@ Gaming platform design for web application.
 <br>
 <hr>
 
-## Structure 
+## Structure
 
 ```
 |-- index.html/
-|-- main.js/
-|-- styles.css/
+|-- index.js/
+|-- assets/
+|   |-- css/
+|   |   |-- styles.css
+|   |-- images/
 |-- components
-|   |-- Landing/
-|   |   |-- Landing.js
-|   |   |-- Landing.css
 |   |-- Header/
 |   |   |-- Header.js
 |   |   |-- Header.css
-|-- utils
-|   |-- api.js
-|   |-- helpers.js
-|-- assets
-|   |-- image1.jpg
-|   |-- image2.jpg
-|-- icons
-|   |-- icon1.svg
-|   |-- icon2.svg
+|   |   |-- Header.html
 ```
+
 ## Project Scripts
-| Name | Description |
-| ------ | ------ |
+
+| Name        | Description              |
+| ----------- | ------------------------ |
 | npm install | install all dependencies |
-| npm run dev | run server|
+| npm run dev | run server               |
