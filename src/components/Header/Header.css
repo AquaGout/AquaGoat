@@ -1,0 +1,4 @@
+/* Se crea todo el CSS del footer que despues se importa en el stylesheet global */
+header {
+    background: red;
+}
