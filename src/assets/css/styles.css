@@ -9,3 +9,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+body {
+    background: linear-gradient(to bottom, #87cefa, #00003d);
+    height: 100vh;
+}
