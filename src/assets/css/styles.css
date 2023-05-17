@@ -9,3 +9,6 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background: linear-gradient(to bottom, #80C0D6, #180869);
+}

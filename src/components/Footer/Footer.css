@@ -1,4 +1,7 @@
 /* Se crea todo el CSS del footer que despues se importa en el stylesheet global */
 footer {
-    background: blue;
+}
+img {
+    width: 100vw;
+
 }
