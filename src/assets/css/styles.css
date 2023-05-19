@@ -6,6 +6,13 @@
 @import url("../../components/Share/Share.css");
 @import url("../../components/PlayNow/PlayNow.css");
 
+/* Fuentes */
+@font-face {
+    src: url("../fonts/Bohemian_Soul.otf") format("truetype");
+    font-family: "Richard Samuels";
+    src: url("../fonts/Richard_Samuels.otf") format("truetype");
+}
+
 /* Se insertan clases o CSS global */
 * {
     padding: 0;
@@ -13,7 +20,14 @@
     box-sizing: border-box;
 }
 
-body {
+html {
+    font-family: "Richard Samuels";
+    font-size: 35px;
+    color: white;
+}
+
+/* body {
     background: linear-gradient(to bottom, #80c0d6, #180869);
     height: 100vh;
 }
+ */
