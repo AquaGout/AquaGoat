@@ -1,4 +1,158 @@
 /* Se crea todo el CSS del footer que despues se importa en el stylesheet global */
-.LandingContent {
-    background: transparent;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spacer {
+    aspect-ratio: 850/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.spacer3 {
+    height: 100px;
+    background: #4ca4f7;
+}
+
+.layer1 {
+    background-image: url("../../assets/images/layered-waves-haikei-10.svg");
+}
+
+.spacer2 {
+    aspect-ratio: 680/200;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.layer2 {
+    background-image: url("../../assets/images/layered-waves-haikei-8.svg");
+}
+
+.footer {
+    width: 100%;
+    background: #ff9f61;
+}
+
+.game-image {
+    align-self: center;
+    grid-row: span 5 / span 5;
+    grid-row-start: 1;
+    grid-column: 1 / -1;
+}
+
+.body-gradient {
+    height: 2700px;
+    background: linear-gradient(to bottom, #4ca4f7, #005cb1);
+    display: flex;
+    flex-direction: column;
+}
+
+.layer3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-description {
+    margin-top: 70px;
+    font-size: 80px;
+    text-align: center;
+
+    /* Adjust the value as needed to position it higher */
+}
+
+.cabriela-text {
+    color: #c92167;
+    font-size: 90px;
+    margin: 0%;
+}
+
+.sub-description {
+    color: #2b2a55;
+}
+
+.inf-container {
+    display: flex;
+    align-items: center;
+    padding-top: 25%;
+    padding-left: 10%;
+}
+
+.enemy-container {
+    display: flex;
+    align-items: center;
+}
+
+.enemy-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.enemy1 {
+    height: 250px;
+    width: 250px;
+    background-color: red;
+    margin-right: 80px;
+}
+
+.enemy2 {
+    height: 250px;
+    width: 250px;
+    background-color: red;
+    margin-top: 80px;
+    margin-right: 80px;
+}
+
+.enemy3 {
+    height: 250px;
+    width: 250px;
+    background-color: red;
+    margin-top: 80px;
+    margin-right: 80px;
+}
+
+.enemy-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.enemy-text1 {
+    height: 250px;
+    width: 250px;
+    margin-top: 80px;
+}
+
+.enemy-text2 {
+    height: 250px;
+    width: 250px;
+    margin-top: 80px;
+}
+
+.enemy-text3 {
+    height: 250px;
+    width: 250px;
+    margin-top: 80px;
+}
+
+.game-summary {
+    height: 900px;
+    width: 900px;
+    background-color: red;
+    margin-left: 30%;
+}
+
+.description-blob {
+    bakground: url("./assets/images/description-blob.svg");
+    aspect-ratio: 850/100;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
