@@ -2,10 +2,18 @@
 @import url("../../components/Header/Header.css");
 @import url("../../components/Footer/Footer.css");
 @import url("../../components/LandingContent/LandingContent.css");
+@import url("../../components/HowtoPlay/HowtoPlay.css");
+@import url("../../components/Share/Share.css");
+@import url("../../components/PlayNow/PlayNow.css");
 
 /* Se insertan clases o CSS global */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #80c0d6, #180869);
+    height: 100vh;
 }

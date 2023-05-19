@@ -5,5 +5,5 @@ import { LandingContent } from "./components/LandingContent/LandingContent.js";
 
 /* Se inicializa cada componente JS */
 Header();
-Footer();
 LandingContent();
+Footer();
