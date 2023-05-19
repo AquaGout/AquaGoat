@@ -2,6 +2,9 @@
 @import url("../../components/Header/Header.css");
 @import url("../../components/Footer/Footer.css");
 @import url("../../components/LandingContent/LandingContent.css");
+@import url("../../components/HowtoPlay/HowtoPlay.css");
+@import url("../../components/Share/Share.css");
+@import url("../../components/PlayNow/PlayNow.css");
 
 /* Se insertan clases o CSS global */
 * {
