@@ -121,11 +121,13 @@ export const Playnow = () => {
       function CrearObstaculo() {
         const obstaculo = document.createElement("div");
         contenedor.appendChild(obstaculo);
-        obstaculo.classList.add("cactus");
-        if (Math.random() > 0.5) obstaculo.classList.add("cactus2");
+        obstaculo.classList.add("medusa");
+        if (Math.random() > 0.5) obstaculo.classList.add("pulpo");
+        else if (Math.random() < 0.5) obstaculo.classList.add("tiburon");
         obstaculo.posY = contenedor.clientHeight;
         obstaculo.style.top = contenedor.clientHeight + "px";
         obstaculo.style.left = getRandomLeft() + "px";
+        console.log("clientHeight", contenedor.clientHeight);
 
         obstaculos.push(obstaculo);
         tiempoHastaObstaculo = tiempoObstaculoMin + Math.random() * (tiempoObstaculoMax - tiempoObstaculoMin) / gameVel;
@@ -161,5 +163,15 @@ export const Playnow = () => {
     });
 
   // mas javascript
+  // mas javascript hecho por SARA.
+  // Crear botones de restart, pause y sonido.
+  const restartButton = document.getElementById("restartButton");
+  const pauseButton = document.getElementById("pauseButton");
+  const soundButton = document.getElementById("soundButton");
+  // Agregarle la opción de poder clicar encima.
+  restartButton.addEventListener("click", Init);
+  pauseButton.addEventListener("click", pauseGame);
+  soundButton.addEventListener("click", toggleSound);
+
   console.log("Playnow");
 };

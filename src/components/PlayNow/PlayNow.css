@@ -8,6 +8,27 @@
     overflow: hidden;
 }
 
+.container-buttons-game {
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+.restartButton {
+    width: 300px;
+    height: 100px;
+    background: transparent;
+    border: 2px;
+    outline: none;
+    border-radius: 47px;
+    cursor: pointer;
+    color: rgb(3 3 3);
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+    font-size: 35px;
+    font-family: "Richard Samuels";
+}
+
 .objeto {
     width: 84px;
     height: 84px;
@@ -35,21 +56,27 @@
     /* background-size: 50% 42px; */
 }
 
-.cactus {
-    width: 46px;
-    height: 96px;
+.medusa {
+    width: 134px;
+    height: 134px;
     position: absolute;
 
     /*  bottom: 1px; */
     left: 600px;
     z-index: 1;
-    background: url("../../assets/images/cactus1.png") no-repeat;
+    background: url("../../assets/images/medusaenemigo134px.png") no-repeat;
 }
 
-.cactus2 {
-    width: 98px;
-    height: 66px;
-    background: url("../../assets/images/cactus2.png") no-repeat;
+.pulpo {
+    width: 134px;
+    height: 134px;
+    background: url("../../assets/images/pulpoenemigo134px.png") no-repeat;
+}
+
+.tiburon {
+    width: 134px;
+    height: 134px;
+    background: url("../../assets/images/tiburonenemigo134.png") no-repeat;
 }
 
 @keyframes animarObjeto {
