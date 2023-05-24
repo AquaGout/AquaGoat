@@ -40,15 +40,8 @@
     background: #ff9f61;
 }
 
-.game-image {
-    align-self: center;
-    grid-row: span 5 / span 5;
-    grid-row-start: 1;
-    grid-column: 1 / -1;
-}
-
 .body-gradient {
-    height: 2700px;
+    height: 3300px;
     background: linear-gradient(to bottom, #4ca4f7, #005cb1);
     display: flex;
     flex-direction: column;
@@ -81,7 +74,7 @@
 .inf-container {
     display: flex;
     align-items: center;
-    padding-top: 25%;
+    padding-top: 20%;
     padding-left: 10%;
 }
 
@@ -93,29 +86,27 @@
 .enemy-description {
     display: flex;
     flex-direction: column;
+    height: auto;
+    width:600px;
 }
 
-.enemy1 {
-    height: 250px;
-    width: 250px;
-    background-color: red;
-    margin-right: 80px;
+.enemy1 img {
+    max-height: 300px;
+    max-width: 300px;
 }
 
-.enemy2 {
-    height: 250px;
-    width: 250px;
-    background-color: red;
+.enemy2 img {
+    height: 500px;
+    width: 500px;
     margin-top: 80px;
     margin-right: 80px;
 }
 
-.enemy3 {
-    height: 250px;
-    width: 250px;
-    background-color: red;
-    margin-top: 80px;
+.enemy3 img {
+    height: 500px;
+    width: 500px;
     margin-right: 80px;
+    margin-top: 80px;
 }
 
 .enemy-text {
@@ -125,34 +116,17 @@
 
 .enemy-text1 {
     height: 250px;
-    width: 250px;
-    margin-top: 80px;
+    width: 100%;
 }
 
 .enemy-text2 {
     height: 250px;
-    width: 250px;
-    margin-top: 80px;
+    width: 100%;
+    margin-top: 290px;
 }
 
 .enemy-text3 {
     height: 250px;
-    width: 250px;
-    margin-top: 80px;
-}
-
-.game-summary {
-    height: 900px;
-    width: 900px;
-    background-color: red;
-    margin-left: 30%;
-}
-
-.description-blob {
-    bakground: url("./assets/images/description-blob.svg");
-    aspect-ratio: 850/100;
     width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    margin-top: 330px;
 }

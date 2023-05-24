@@ -1,3 +1,4 @@
+import { Playnow } from "../PlayNow/PlayNow";
 /* Se carga todo JS y su funcionalidad */
 /* Primero se crea una funcion global para insertar el componente  */
 export const Header = () => {
@@ -13,7 +14,8 @@ export const Header = () => {
   // creamos evento click propagacion.
   document.addEventListener("click", function (event) {
     event.preventDefault();
-    // comparamos si evento es el boton home
+
+    // RUTA HOME
     if (event.target.matches("#homeLink")) {
       fetch("./components/LandingContent/LandingContent.html")
         .then(response => response.text())
@@ -22,7 +24,8 @@ export const Header = () => {
           document.getElementById("content").innerHTML = htmlHome;
         });
     }
-    // comparamos si evento es el boton howToPlay
+
+    // RUTA HOWTOPLAY
     if (event.target.matches("#howToPlay")) {
       fetch("./components/HowtoPlay/HowtoPlay.html")
         .then(response => response.text())
@@ -31,6 +34,8 @@ export const Header = () => {
           document.getElementById("content").innerHTML = htmlHowtoPlay;
         });
     }
+
+    // RUTA SHARE
     if (event.target.matches("#Share")) {
       fetch("./components/Share/Share.html")
         .then(response => response.text())
@@ -39,16 +44,13 @@ export const Header = () => {
           document.getElementById("content").innerHTML = htmlShare;
         });
     }
+
+    // RUTA DE PLAYNOW
     if (event.target.matches("#PlayNow")) {
-      fetch("./components/PlayNow/PlayNow.html")
-        .then(response => response.text())
-        .then(htmlPlayNow => {
-          // Insertar el contenido del archivo en el elemento con el id "header"
-          document.getElementById("content").innerHTML = htmlPlayNow;
-        });
+      // se carga el javascript de playnow donde esta la ruta y funcionalida del juego
+      Playnow();
     }
   });
 
   // mas javascript
-  console.log("Component Header");
 };
