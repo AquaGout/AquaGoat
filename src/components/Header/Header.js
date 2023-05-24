@@ -65,6 +65,8 @@ export const Header = () => {
             time = new Date();
             /* Start(); */
             Loop();
+
+            generarPecesFondo();
           }
 
           // crea el ciclo con delay de tiempo que simula el movimiento de la pantalla
@@ -98,6 +100,7 @@ export const Header = () => {
 
           // aqui cargamos todas las funcionalidades que tiene el juego
           function Update() {
+            console.log(parado);
             if (parado) return;
             MoverSuelo();
             DecidirCrearObstaculos();
@@ -161,8 +164,9 @@ export const Header = () => {
           function CrearObstaculo() {
             const obstaculo = document.createElement("div");
             contenedor.appendChild(obstaculo);
-            obstaculo.classList.add("cactus");
-            if (Math.random() > 0.5) obstaculo.classList.add("cactus2");
+            obstaculo.classList.add("medusa");
+            if (Math.random() > 0.5) obstaculo.classList.add("pulpo");
+            else if (Math.random() < 0.5) obstaculo.classList.add("tiburon");
             obstaculo.posY = contenedor.clientHeight;
             obstaculo.style.top = contenedor.clientHeight + "px";
             obstaculo.style.left = getRandomLeft() + "px";
@@ -199,9 +203,34 @@ export const Header = () => {
               }
             }
           }
-        });
+        }
+        );
     }
   });
+  // mas javascript hecho por SARA.
+  // Crear botones de restart, pause y sonido.
+  const restartButton = document.getElementById("restartButton");
+  const pauseButton = document.getElementById("pauseButton");
+  const soundButton = document.getElementById("soundButton");
+  // Agregarle la opción de poder clicar encima.
+  restartButton.addEventListener("click", Init);
+  pauseButton.addEventListener("click", pauseGame);
+  soundButton.addEventListener("click", toggleSound);
 
-  // mas javascript
+  function restartGame() {
+
+  }
+
+  function generarPecesFondo() {
+    const cantidadPeces = 25;
+    const contenedor = document.getElementById("contenedor");
+    for (let i = 0; i < cantidadPeces; i++) {
+      const pez = document.createElement("div");
+      pez.classList.add("fish");
+      pez.style.left = getRandomLeft() + "px"; // Utiliza getRandomLeft() para obtener una posición aleatoria
+      pez.style.top = getRandomTop() + "px"; // Utiliza getRandomTop() para obtener una posición aleatoria
+
+      contenedor.appendChild(pez);
+    }
+  }
 };

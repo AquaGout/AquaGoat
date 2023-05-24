@@ -8,6 +8,11 @@
     overflow: hidden;
 }
 
+.container-buttons-game {
+    margin-left: 50px;
+    font-size: 30px;
+}
+
 .objeto {
     width: 84px;
     height: 84px;
@@ -35,21 +40,36 @@
     /* background-size: 50% 42px; */
 }
 
-.cactus {
-    width: 46px;
-    height: 96px;
+.medusa {
+    width: 134px;
+    height: 134px;
     position: absolute;
 
     /*  bottom: 1px; */
     left: 600px;
     z-index: 1;
-    background: url("../../assets/images/cactus1.png") no-repeat;
+    background: url("../../assets/images/medusaenemigo134px.png") no-repeat;
 }
 
-.cactus2 {
-    width: 98px;
-    height: 66px;
-    background: url("../../assets/images/cactus2.png") no-repeat;
+.pulpo {
+    width: 134px;
+    height: 134px;
+    background: url("../../assets/images/pulpoenemigo134px.png") no-repeat;
+}
+
+.tiburon {
+    width: 134px;
+    height: 134px;
+    background: url("../../assets/images/tiburonenemigo134.png") no-repeat;
+}
+
+.fish {
+    position: absolute;
+    width: 920px; /* Especifica el ancho deseado */
+    height: 600px; /* Especifica el alto deseado */
+    background-image: url("/src/assets/images/fondonegropez.png") no-repeat; /* Especifica la imagen de fondo */
+
+    /* Agrega otros estilos necesarios, como la posición, la animación, etc. */
 }
 
 @keyframes animarObjeto {
