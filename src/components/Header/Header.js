@@ -108,37 +108,68 @@ export const Header = () => {
 
             velY -= gravedad * deltaTime;
           }
+          const transitionDuration = 0.3; // Duración de la transición en segundos
+          let isTransitioning = false; // Variable de estado para controlar la transición en curso
+          const velocity = 1000; // Velocidad de movimiento en píxeles por segundo, ajusta este valor según tus preferencias
+
+          let startTime = null;
+          let previousTime = null;
+          let animationFrameId = null;
 
           function HandleKeyDown(event) {
-            if (event.key === "ArrowRight") {
-            // La tecla derecha ha sido presionada
-              console.log("Tecla derecha presionada");
-              if (objetoMoved === 750) {
-                objetoMoved = 750;
-              }
-              if (objetoMoved === 480) {
-                objetoMoved = 750;
-              }
-              if (objetoMoved === 250) {
-                objetoMoved = 480;
-              }
-              objeto.style.left = objetoMoved + "px";
-            } else if (event.key === "ArrowLeft") {
-            // La tecla izquierda ha sido presionada
-              console.log("Tecla izquierda presionada");
-              if (objetoMoved === 250) {
-                objetoMoved = 250;
-              }
-              if (objetoMoved === 480) {
-                objetoMoved = 250;
-              }
-              if (objetoMoved === 750) {
-                objetoMoved = 480;
-              }
+            if (isTransitioning) return; // Si hay una transición en curso, salimos de la función
 
-              objeto.style.left = objetoMoved + "px";
+            if (event.key === "ArrowRight") {
+              console.log("Tecla derecha presionada");
+              startMoving(1);
+            } else if (event.key === "ArrowLeft") {
+              console.log("Tecla izquierda presionada");
+              startMoving(-1);
             }
           }
+
+          function HandleKeyUp(event) {
+            if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+              console.log("Tecla soltada");
+              stopMoving();
+            }
+          }
+
+          function startMoving(direction) {
+            if (isTransitioning) return;
+
+            startTime = performance.now();
+            previousTime = startTime;
+
+            function move(currentTime) {
+              const deltaTime = (currentTime - previousTime) / 1000;
+              previousTime = currentTime;
+
+              const displacement = velocity * deltaTime * direction;
+              objetoMoved = Math.max(0, Math.min(objetoMoved + displacement, contenedor.clientWidth - objeto.clientWidth));
+              objeto.style.left = objetoMoved + "px";
+
+              if (objetoMoved <= 0 || objetoMoved >= contenedor.clientWidth - objeto.clientWidth) {
+                stopMoving();
+              } else {
+                animationFrameId = requestAnimationFrame(move);
+              }
+            }
+
+            isTransitioning = true;
+            animationFrameId = requestAnimationFrame(move);
+          }
+
+          function stopMoving() {
+            if (!isTransitioning) return;
+
+            cancelAnimationFrame(animationFrameId);
+            isTransitioning = false;
+          }
+
+          document.addEventListener("keydown", HandleKeyDown);
+          document.addEventListener("keyup", HandleKeyUp);
+
           // funcion para simular movimiento de las busbujas
           // la cual es solo una imagen png que se recarga varias
           // y corre en el eje y para simular movimiento
@@ -169,8 +200,12 @@ export const Header = () => {
             else if (Math.random() < 0.5) obstaculo.classList.add("tiburon");
             obstaculo.posY = contenedor.clientHeight;
             obstaculo.style.top = contenedor.clientHeight + "px";
-            obstaculo.style.left = getRandomLeft() + "px";
-            console.log("clientHeight", contenedor.clientHeight);
+
+            const randomDirection = Math.random() * 2 - 1; // Número aleatorio entre -1 y 1
+            obstaculo.velocidadX = randomDirection * 200; // Ajusta la velocidad horizontal
+
+            const initialPosition = randomDirection < 0 ? 750 : 250; // Posición inicial según la dirección
+            obstaculo.style.left = initialPosition + "px";
 
             obstaculos.push(obstaculo);
             tiempoHastaObstaculo = tiempoObstaculoMin + Math.random() * (tiempoObstaculoMax - tiempoObstaculoMin) / gameVel;
@@ -191,6 +226,9 @@ export const Header = () => {
           }
           // funcionalidad que permite que los obstaculos se puevan hacia arriba simulando desplazamiento de la pantalla
           // la velocidad es paralela a la pantalla y puede ser modificable
+          // funcionalidad que permite que los obstaculos se puevan hacia arriba simulando desplazamiento de la pantalla
+          // la velocidad es paralela a la pantalla y puede ser modificable
+
           function MoverObstaculos() {
             for (let i = obstaculos.length - 1; i >= 0; i--) {
               if (obstaculos[i].posY < -obstaculos[i].clientHeight) {
@@ -200,6 +238,7 @@ export const Header = () => {
               } else {
                 obstaculos[i].posY -= CalcularDesplazamiento();
                 obstaculos[i].style.top = obstaculos[i].posY + "px";
+                obstaculos[i].style.left = parseFloat(obstaculos[i].style.left) + obstaculos[i].velocidadX * deltaTime + "px";
               }
             }
           }
