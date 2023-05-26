@@ -1,5 +1,3 @@
-
-
 @font-face {
     src: url("assets/fonts/Bohemian_Soul.otf") format("truetype");
     font-family: "Richard Samuels";
@@ -75,7 +73,7 @@ body {
 
 .right-rocks {
     flex: 1;
-    background-image: url("/src/assets/images/right-rocks.svg");
+    background-image: url("../../assets/images/right-rocks.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -147,7 +145,7 @@ body {
     flex: 1;
     position: relative;
     overflow: hidden;
-    background-image: url("/src/assets/images/background-fishes.svg");
+    background-image: url("../../assets/images/background-fishes.svg");
     background-repeat: repeat; /* O repeat-x según tus necesidades */
     background-size: auto; /* Modificación aquí */
     background-position: center;
