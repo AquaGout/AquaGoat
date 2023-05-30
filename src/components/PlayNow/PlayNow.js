@@ -1,4 +1,3 @@
-
 export const Playnow = () => {
   // CARGAR LA RUTA O COMPONENTE
   fetch("./components/PlayNow/PlayNow.html")
@@ -26,6 +25,8 @@ export const Playnow = () => {
         time = new Date();
         /* Start(); */
         Loop();
+
+        generarPecesFondo();
       }
 
       // crea el ciclo con delay de tiempo que simula el movimiento de la pantalla
@@ -59,43 +60,77 @@ export const Playnow = () => {
 
       // aqui cargamos todas las funcionalidades que tiene el juego
       function Update() {
+        console.log(parado);
         if (parado) return;
         MoverSuelo();
         DecidirCrearObstaculos();
         MoverObstaculos();
+
         if (velY) velY -= gravedad * deltaTime;
       }
+      /* boton no se esta usando
+      const transitionDuration = 0.3;  */// Duración de la transición en segundos
+      let isTransitioning = false; // Variable de estado para controlar la transición en curso
+      const velocity = 1000; // Velocidad de movimiento en píxeles por segundo, ajusta este valor según tus preferencias
+
+      let startTime = null;
+      let previousTime = null;
+      let animationFrameId = null;
 
       function HandleKeyDown(event) {
-        if (event.key === "ArrowRight") {
-          // La tecla derecha ha sido presionada
-          console.log("Tecla derecha presionada");
-          if (objetoMoved === 750) {
-            objetoMoved = 750;
-          }
-          if (objetoMoved === 480) {
-            objetoMoved = 750;
-          }
-          if (objetoMoved === 250) {
-            objetoMoved = 480;
-          }
-          objeto.style.left = objetoMoved + "px";
-        } else if (event.key === "ArrowLeft") {
-          // La tecla izquierda ha sido presionada
-          console.log("Tecla izquierda presionada");
-          if (objetoMoved === 250) {
-            objetoMoved = 250;
-          }
-          if (objetoMoved === 480) {
-            objetoMoved = 250;
-          }
-          if (objetoMoved === 750) {
-            objetoMoved = 480;
-          }
+        if (isTransitioning) return; // Si hay una transición en curso, salimos de la función
 
-          objeto.style.left = objetoMoved + "px";
+        if (event.key === "ArrowRight") {
+          console.log("Tecla derecha presionada");
+          startMoving(1);
+        } else if (event.key === "ArrowLeft") {
+          console.log("Tecla izquierda presionada");
+          startMoving(-1);
         }
       }
+
+      function HandleKeyUp(event) {
+        if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+          console.log("Tecla soltada");
+          stopMoving();
+        }
+      }
+
+      function startMoving(direction) {
+        if (isTransitioning) return;
+
+        startTime = performance.now();
+        previousTime = startTime;
+
+        function move(currentTime) {
+          const deltaTime = (currentTime - previousTime) / 1000;
+          previousTime = currentTime;
+
+          const displacement = velocity * deltaTime * direction;
+          objetoMoved = Math.max(0, Math.min(objetoMoved + displacement, contenedor.clientWidth - objeto.clientWidth));
+          objeto.style.left = objetoMoved + "px";
+
+          if (objetoMoved <= 0 || objetoMoved >= contenedor.clientWidth - objeto.clientWidth) {
+            stopMoving();
+          } else {
+            animationFrameId = requestAnimationFrame(move);
+          }
+        }
+
+        isTransitioning = true;
+        animationFrameId = requestAnimationFrame(move);
+      }
+
+      function stopMoving() {
+        if (!isTransitioning) return;
+
+        cancelAnimationFrame(animationFrameId);
+        isTransitioning = false;
+      }
+
+      document.addEventListener("keydown", HandleKeyDown);
+      document.addEventListener("keyup", HandleKeyUp);
+
       // funcion para simular movimiento de las busbujas
       // la cual es solo una imagen png que se recarga varias
       // y corre en el eje y para simular movimiento
@@ -126,8 +161,12 @@ export const Playnow = () => {
         else if (Math.random() < 0.5) obstaculo.classList.add("tiburon");
         obstaculo.posY = contenedor.clientHeight;
         obstaculo.style.top = contenedor.clientHeight + "px";
-        obstaculo.style.left = getRandomLeft() + "px";
-        console.log("clientHeight", contenedor.clientHeight);
+
+        const randomDirection = Math.random() * 2 - 1; // Número aleatorio entre -1 y 1
+        obstaculo.velocidadX = randomDirection * 200; // Ajusta la velocidad horizontal
+
+        const initialPosition = randomDirection < 0 ? 750 : 250; // Posición inicial según la dirección
+        obstaculo.style.left = initialPosition + "px";
 
         obstaculos.push(obstaculo);
         tiempoHastaObstaculo = tiempoObstaculoMin + Math.random() * (tiempoObstaculoMax - tiempoObstaculoMin) / gameVel;
@@ -148,30 +187,64 @@ export const Playnow = () => {
       }
       // funcionalidad que permite que los obstaculos se puevan hacia arriba simulando desplazamiento de la pantalla
       // la velocidad es paralela a la pantalla y puede ser modificable
+      // funcionalidad que permite que los obstaculos se puevan hacia arriba simulando desplazamiento de la pantalla
+      // la velocidad es paralela a la pantalla y puede ser modificable
+
       function MoverObstaculos() {
         for (let i = obstaculos.length - 1; i >= 0; i--) {
           if (obstaculos[i].posY < -obstaculos[i].clientHeight) {
             obstaculos[i].parentNode.removeChild(obstaculos[i]);
             obstaculos.splice(i, 1);
-          /* GanarPuntos(); */
+            /* GanarPuntos(); */
           } else {
             obstaculos[i].posY -= CalcularDesplazamiento();
             obstaculos[i].style.top = obstaculos[i].posY + "px";
+            obstaculos[i].style.left = parseFloat(obstaculos[i].style.left) + obstaculos[i].velocidadX * deltaTime + "px";
           }
         }
       }
-    });
+
+      // mas javascript hecho por SARA.
+      // Crear botones de restart, pause y sonido.
+      const restartButton = document.getElementById("restartButton");
+      /*       const pauseButton = document.getElementById("pauseButton");
+      const soundButton = document.getElementById("soundButton"); */
+      // Agregarle la opción de poder clicar encima.
+      restartButton.addEventListener("click", Init);
+
+      /*       estan declaradas pero no se utilizan por ahora genera error
+      pauseButton.addEventListener("click", pauseGame);
+      soundButton.addEventListener("click", toggleSound); */
+
+      /*       function restartGame() {
+
+      } */
+
+      function generarPecesFondo() {
+        const cantidadPeces = 25;
+        const contenedor = document.getElementById("contenedor");
+        for (let i = 0; i < cantidadPeces; i++) {
+          const pez = document.createElement("div");
+          pez.classList.add("fish");
+          pez.style.left = getRandomLeft() + "px"; // Utiliza getRandomLeft() para obtener una posición aleatoria
+          /* hay un error aqui / / pez.style.top = getRandomTop() + "px"; */ // Utiliza getRandomTop() para obtener una posición aleatoria
+
+          contenedor.appendChild(pez);
+        }
+      }
+    }
+    );
 
   // mas javascript
   // mas javascript hecho por SARA.
   // Crear botones de restart, pause y sonido.
-  const restartButton = document.getElementById("restartButton");
+  /*   const restartButton = document.getElementById("restartButton");
   const pauseButton = document.getElementById("pauseButton");
   const soundButton = document.getElementById("soundButton");
-  // Agregarle la opción de poder clicar encima.
+
   restartButton.addEventListener("click", Init);
   pauseButton.addEventListener("click", pauseGame);
-  soundButton.addEventListener("click", toggleSound);
+  soundButton.addEventListener("click", toggleSound); */
 
   console.log("Playnow");
 };
