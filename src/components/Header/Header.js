@@ -51,6 +51,4 @@ export const Header = () => {
       Playnow();
     }
   });
-
-  // mas javascript
 };
