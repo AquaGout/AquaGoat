@@ -1,29 +1,39 @@
+/* Fuentes */
 @font-face {
-    src: url("assets/fonts/Bohemian_Soul.otf") format("truetype");
+    src: url("../../assets/fonts/Richard_Samuels.otf") format("truetype");
     font-family: "Richard Samuels";
-    src: url("assets/fonts/Richard_Samuels.otf") format("truetype");
+    src: url("../../assets/fonts/Richard_Samuels.otf") format("truetype");
 }
 
+/* Se insertan clases o CSS global */
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    font-family: "Richard Samuels";
+    font-size: 35px;
+    color: white;
 }
 
 body {
     background: linear-gradient(to bottom, #4ca4f7, #005cb1);
+    height: 5000px;
+    min-width: none;
 }
 
 .container {
     display: flex;
-    height: 100vh;
+    height: 5000px;
 }
 
 .left-rocks {
     flex: 1;
-    background-image: url("src/assets/images/left-rocks.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url("../../assets/images/left-rocks.svg");
+    background-repeat: repeat-y;
+    background-size: auto;
     background-position: center;
 }
 
@@ -40,7 +50,7 @@ body {
     left: 0;
     width: 100%;
     height: 200%;
-    background-image: url("/scr/assets/images/background-fishes.svg");
+    background-image: url("../../assets/images/background-fishes.svg");
     background-repeat: repeat-y;
     background-position: center bottom;
     animation: animateBackground 60s linear infinite;
@@ -74,9 +84,8 @@ body {
 .right-rocks {
     flex: 1;
     background-image: url("../../assets/images/right-rocks.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: repeat-y;
+    background-size: auto;
 }
 
 .bubbles {
@@ -158,7 +167,6 @@ body {
     position: relative;
     overflow: hidden;
 }
-
 
 .objeto {
     width: 150px;
@@ -264,7 +272,7 @@ body {
     font-size: 50px; /* Ajusta el tamaño del score */
     font-weight: bold;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.142);
+    background-color: rgb(255 255 255 / 14.2%);
     padding: 10px 20px;
     border-radius: 40px;
 }
@@ -277,8 +285,7 @@ body {
     background-size: cover;
     border: none;
     background: transparent;
-    text-indent: -9999px; 
+    text-indent: -9999px;
     height: 100px;
     width: 100px;/* Para ocultar el texto del botón */
-  }
-  
+}

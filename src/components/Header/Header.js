@@ -44,11 +44,9 @@ export const Header = () => {
           document.getElementById("content").innerHTML = htmlShare;
         });
     }
-
-    // RUTA DE PLAYNOW
-    if (event.target.matches("#PlayNow")) {
-      // se carga el javascript de playnow donde esta la ruta y funcionalida del juego
-      Playnow();
-    }
+    const playNowButton = document.getElementById("PlayNow");
+    playNowButton.addEventListener("click", function () {
+      window.location.href = "./components/PlayNow2/PlayNow2.html";
+    });
   });
 };
