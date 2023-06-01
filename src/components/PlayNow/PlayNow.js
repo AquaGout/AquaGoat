@@ -5,6 +5,7 @@ export const Playnow = () => {
     .then(htmlPlayNow => {
     // Insertar el contenido del archivo en el elemento con el id "header"
       document.getElementById("content").innerHTML = htmlPlayNow;
+      // Esconder footer, header. //
 
       //* * LOGICA DE EL JUEGO **//
       //* * GAME LOOP **//
@@ -25,8 +26,6 @@ export const Playnow = () => {
         time = new Date();
         /* Start(); */
         Loop();
-
-        generarPecesFondo();
       }
 
       // crea el ciclo con delay de tiempo que simula el movimiento de la pantalla
@@ -44,6 +43,13 @@ export const Playnow = () => {
       /* let textoScore = document.querySelector(".score"); */
       const objeto = document.querySelector(".objeto");
       document.addEventListener("keydown", HandleKeyDown);
+      // Evento para que al bajar a Cabriella no haga scroll la pantalla.
+      document.addEventListener("keydown", function (event) {
+        if (event.keyCode === 40) { // 40 = código de la tecla hacia abajo.
+          event.preventDefault(); // Prevenir el comportamiento predeterminado
+          return false;
+        }
+      });
       const parado = false;
       const gravedad = 2500;
       let sueloX = 0;
@@ -57,6 +63,7 @@ export const Playnow = () => {
       const tiempoObstaculoMax = 1.8;
       /* const obstaculoPosY = 16; */
       const obstaculos = [];
+      let objetoTop = 0;
 
       // aqui cargamos todas las funcionalidades que tiene el juego
       function Update() {
@@ -67,11 +74,13 @@ export const Playnow = () => {
         MoverObstaculos();
 
         if (velY) velY -= gravedad * deltaTime;
+        objetoTop += velY * deltaTime;
+        objeto.style.top = objetoTop + "px";
       }
       /* boton no se esta usando
       const transitionDuration = 0.3;  */// Duración de la transición en segundos
       let isTransitioning = false; // Variable de estado para controlar la transición en curso
-      const velocity = 1000; // Velocidad de movimiento en píxeles por segundo, ajusta este valor según tus preferencias
+      const velocity = 200; // Velocidad de movimiento en píxeles por segundo, ajusta este valor según tus preferencias
 
       let startTime = null;
       let previousTime = null;
@@ -82,21 +91,24 @@ export const Playnow = () => {
 
         if (event.key === "ArrowRight") {
           console.log("Tecla derecha presionada");
-          startMoving(1);
+          startMoving(1, 0); // Que se mueva hacia la derecha
         } else if (event.key === "ArrowLeft") {
           console.log("Tecla izquierda presionada");
-          startMoving(-1);
+          startMoving(-1, 0); // Que se mueva hacia la izq
+        } else if (event.key === "ArrowDown") {
+          console.log("Tecla abajo presionada");
+          startMoving(0, 1); // Que se mueva hacia abajo
         }
       }
-
       function HandleKeyUp(event) {
-        if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+        if (event.key === "ArrowRight" || event.key === "ArrowLeft" || event.key === "ArrowDown") {
           console.log("Tecla soltada");
           stopMoving();
         }
       }
+      document.addEventListener("keyup", HandleKeyUp);
 
-      function startMoving(direction) {
+      function startMoving(horizontalDirection, verticalDirection) {
         if (isTransitioning) return;
 
         startTime = performance.now();
@@ -104,13 +116,22 @@ export const Playnow = () => {
 
         function move(currentTime) {
           const deltaTime = (currentTime - previousTime) / 1000;
+          const velocity = 2000; // Cree una cont de velocidad para que fuera mas rápido
           previousTime = currentTime;
 
-          const displacement = velocity * deltaTime * direction;
-          objetoMoved = Math.max(0, Math.min(objetoMoved + displacement, contenedor.clientWidth - objeto.clientWidth));
+          const horizontalDisplacement = velocity * deltaTime * horizontalDirection;
+          const verticalDisplacement = velocity * deltaTime * verticalDirection;
+
+          objetoMoved = Math.max(0, Math.min(objetoMoved + horizontalDisplacement, contenedor.clientWidth - objeto.clientWidth));
           objeto.style.left = objetoMoved + "px";
 
-          if (objetoMoved <= 0 || objetoMoved >= contenedor.clientWidth - objeto.clientWidth) {
+          objetoTop = Math.max(0, Math.min(objetoTop + verticalDisplacement, contenedor.clientHeight - objeto.clientHeight));
+          objeto.style.top = objetoTop + "px";
+
+          if (objetoMoved <= 0 ||
+              objetoMoved >= contenedor.clientWidth - objeto.clientWidth ||
+              objetoTop <= 0 ||
+              objetoTop >= contenedor.clientHeight - objeto.clientHeight) {
             stopMoving();
           } else {
             animationFrameId = requestAnimationFrame(move);
@@ -219,19 +240,6 @@ export const Playnow = () => {
       /*       function restartGame() {
 
       } */
-
-      function generarPecesFondo() {
-        const cantidadPeces = 25;
-        const contenedor = document.getElementById("contenedor");
-        for (let i = 0; i < cantidadPeces; i++) {
-          const pez = document.createElement("div");
-          pez.classList.add("fish");
-          pez.style.left = getRandomLeft() + "px"; // Utiliza getRandomLeft() para obtener una posición aleatoria
-          /* hay un error aqui / / pez.style.top = getRandomTop() + "px"; */ // Utiliza getRandomTop() para obtener una posición aleatoria
-
-          contenedor.appendChild(pez);
-        }
-      }
     }
     );
 

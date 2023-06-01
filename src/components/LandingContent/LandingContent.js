@@ -9,6 +9,8 @@ export const LandingContent = () => {
       document.getElementById("landingContent").innerHTML = html;
     });
 
+  
+
   // mas javascript
   console.log("LandingContent");
 };
