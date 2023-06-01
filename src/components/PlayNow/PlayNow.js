@@ -285,6 +285,26 @@ export const Playnow = () => {
           soundButton.classList.add("playing");
         }
       });
+
+      // Crear elemento de audio
+      const audio = new Audio("../../assets/audio/soundtrack.mp3");
+
+      // Variable para controlar el estado del sonido
+      let soundOn = true;
+
+      // Función para reproducir o pausar el audio
+      function toggleSound() {
+        if (soundOn) {
+          audio.pause(); // Pausar el audio
+          soundOn = false;
+        } else {
+          audio.play(); // Reproducir el audio
+          soundOn = true;
+        }
+      }
+
+      // Agregar evento click al botón "soundButton"
+      soundButton.addEventListener("click", toggleSound);
     });
 
   // mas javascript
