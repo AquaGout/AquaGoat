@@ -20,6 +20,7 @@ body {
 }
 
 .left-rocks {
+    position: relative;
     flex: 1;
     background-image: url("src/assets/images/left-rocks.svg");
     background-repeat: no-repeat;
@@ -71,7 +72,12 @@ body {
     z-index: -1;
 }
 
+.PlayNow {
+    position: relative;
+}
+
 .right-rocks {
+    position: relative;
     flex: 1;
     background-image: url("../../assets/images/right-rocks.svg");
     background-repeat: no-repeat;
@@ -160,8 +166,38 @@ body {
 }
 
 .container-buttons-game {
-    margin-left: 50px;
-    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-buttons-game .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-buttons-game button {
+    display: block;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+}
+
+.score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    font-family: "Richard Samuels", sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(0 0 0 / 50%);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .restartButton {
