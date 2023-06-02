@@ -234,7 +234,10 @@ export const Playnow = () => {
       /*       const pauseButton = document.getElementById("pauseButton");
       const soundButton = document.getElementById("soundButton"); */
       // Agregarle la opción de poder clicar encima.
-      restartButton.addEventListener("click", Init);
+      restartButton.addEventListener("click", () => {
+        console.log("init");
+        score = 0;
+      });
 
       /*       estan declaradas pero no se utilizan por ahora genera error
       pauseButton.addEventListener("click", pauseGame);
@@ -257,8 +260,8 @@ export const Playnow = () => {
         }
       }
       /* Hacer que los botones de pause y sound-on se cambien por
-         play y sound-off cuando se hace click sobre ellos*/
-      let pauseButton = document.getElementById("pauseButton");
+         play y sound-off cuando se hace click sobre ellos */
+      const pauseButton = document.getElementById("pauseButton");
       pauseButton.addEventListener("click", function () {
         if (pauseButton.classList.contains("playing")) {
           pauseButton.style.backgroundImage =
@@ -273,7 +276,7 @@ export const Playnow = () => {
         }
       });
 
-      let soundButton = document.getElementById("soundButton");
+      const soundButton = document.getElementById("soundButton");
       soundButton.addEventListener("click", function () {
         if (soundButton.classList.contains("playing")) {
           soundButton.style.backgroundImage =
@@ -305,6 +308,12 @@ export const Playnow = () => {
 
       // Agregar evento click al botón "soundButton"
       soundButton.addEventListener("click", toggleSound);
+
+      const returnButton = document.getElementById("returnButton");
+
+      returnButton.addEventListener("click", function () {
+        window.location.href = "../../index.html";
+      });
     });
 
   // mas javascript

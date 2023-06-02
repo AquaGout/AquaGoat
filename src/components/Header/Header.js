@@ -4,9 +4,9 @@ import { Playnow } from "../PlayNow/PlayNow";
 export const Header = () => {
   // Cargar el contenido del archivo header.html
   fetch("./components/Header/Header.html")
-    .then(response => response.text())
-    .then(html => {
-    // Insertar el contenido del archivo en el elemento con el id "header"
+    .then((response) => response.text())
+    .then((html) => {
+      // Insertar el contenido del archivo en el elemento con el id "header"
       document.getElementById("header").innerHTML = html;
     });
 
@@ -18,8 +18,8 @@ export const Header = () => {
     // RUTA HOME
     if (event.target.matches("#homeLink")) {
       fetch("./components/LandingContent/LandingContent.html")
-        .then(response => response.text())
-        .then(htmlHome => {
+        .then((response) => response.text())
+        .then((htmlHome) => {
           // Insertar el contenido del archivo en el elemento con el id "header"
           document.getElementById("content").innerHTML = htmlHome;
         });
@@ -28,8 +28,8 @@ export const Header = () => {
     // RUTA HOWTOPLAY
     if (event.target.matches("#howToPlay")) {
       fetch("./components/HowtoPlay/HowtoPlay.html")
-        .then(response => response.text())
-        .then(htmlHowtoPlay => {
+        .then((response) => response.text())
+        .then((htmlHowtoPlay) => {
           // Insertar el contenido del archivo en el elemento con el id "header"
           document.getElementById("content").innerHTML = htmlHowtoPlay;
         });
@@ -38,8 +38,8 @@ export const Header = () => {
     // RUTA SHARE
     if (event.target.matches("#Share")) {
       fetch("./components/Share/Share.html")
-        .then(response => response.text())
-        .then(htmlShare => {
+        .then((response) => response.text())
+        .then((htmlShare) => {
           // Insertar el contenido del archivo en el elemento con el id "header"
           document.getElementById("content").innerHTML = htmlShare;
         });
@@ -49,6 +49,11 @@ export const Header = () => {
     if (event.target.matches("#PlayNow")) {
       // se carga el javascript de playnow donde esta la ruta y funcionalida del juego
       Playnow();
+
+      const navigationHeader = document.querySelector(".navigation");
+      const footerContainer = document.getElementById("footer");
+      navigationHeader.style.display = "none";
+      footerContainer.style.display = "none";
     }
   });
 };
