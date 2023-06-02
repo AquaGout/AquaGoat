@@ -1,132 +1,133 @@
 /* Se crea todo el CSS del footer que despues se importa en el stylesheet global */
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .spacer {
-    aspect-ratio: 850/100;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  aspect-ratio: 850/100;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .spacer3 {
-    height: 100px;
-    background: #4ca4f7;
+  height: 100px;
 }
 
 .layer1 {
-    background-image: url("../../assets/images/layered-waves-haikei-10.svg");
+  background-image: url("../../assets/images/layered-waves-haikei-10.svg");
 }
 
 .spacer2 {
-    aspect-ratio: 680/200;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
+  aspect-ratio: 680/200;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .layer2 {
-    background-image: url("../../assets/images/layered-waves-haikei-8.svg");
+  background-image: url("../../assets/images/layered-waves-haikei-8.svg");
 }
 
 .footer {
-    width: 100%;
-    background: #ff9f61;
+  width: 100%;
+  background: #ff9f61;
 }
 
 .body-gradient {
-    height: 3300px;
-    background: linear-gradient(to bottom, #4ca4f7, #005cb1);
-    display: flex;
-    flex-direction: column;
+  height: 3300px;
+  background: linear-gradient(to bottom, #4ca4f7, #005cb1);
+  display: flex;
+  flex-direction: column;
 }
 
 .layer3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-description {
-    margin-top: 70px;
-    font-size: 80px;
-    text-align: center;
+  margin-top: 70px;
+  font-size: 80px;
+  text-align: center;
 
-    /* Adjust the value as needed to position it higher */
+  /* Adjust the value as needed to position it higher */
 }
 
 .cabriela-text {
-    color: #c92167;
-    font-size: 90px;
-    margin: 0%;
+  color: #c92167;
+  font-size: 90px;
+  margin: 0%;
 }
 
 .sub-description {
-    color: #2b2a55;
+  color: #2b2a55;
 }
 
 .inf-container {
-    display: flex;
-    align-items: center;
-    padding-top: 20%;
-    padding-left: 10%;
+  display: flex;
+  align-items: center;
+  padding-top: 20%;
+  padding-left: 10%;
 }
 
 .enemy-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .enemy-description {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    width:600px;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 600px;
 }
 
 .enemy1 img {
-    max-height: 300px;
-    max-width: 300px;
+  max-height: 300px;
+  max-width: 300px;
 }
 
 .enemy2 img {
-    height: 500px;
-    width: 500px;
-    margin-top: 80px;
-    margin-right: 80px;
+  height: 500px;
+  width: 500px;
+  margin-top: 80px;
+  margin-right: 80px;
 }
 
 .enemy3 img {
-    height: 500px;
-    width: 500px;
-    margin-right: 80px;
-    margin-top: 80px;
+  height: 500px;
+  width: 500px;
+  margin-right: 80px;
+  margin-top: 80px;
 }
 
 .enemy-text {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .enemy-text1 {
-    height: 250px;
-    width: 100%;
+  height: 250px;
+  width: 100%;
 }
 
 .enemy-text2 {
-    height: 250px;
-    width: 100%;
-    margin-top: 290px;
+  height: 250px;
+  width: 100%;
+  margin-top: 290px;
 }
 
 .enemy-text3 {
-    height: 250px;
-    width: 100%;
-    margin-top: 330px;
+  height: 250px;
+  width: 100%;
+  margin-top: 330px;
 }
+
+/* stylelint-disable indentation */
