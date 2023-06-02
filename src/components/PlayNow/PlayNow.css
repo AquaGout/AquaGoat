@@ -1,247 +1,243 @@
 @font-face {
-    src: url("assets/fonts/Bohemian_Soul.otf") format("truetype");
-    font-family: "Richard Samuels";
-    src: url("assets/fonts/Richard_Samuels.otf") format("truetype");
+  src: url("assets/fonts/Bohemian_Soul.otf") format("truetype");
+  font-family: "Richard Samuels";
+  src: url("assets/fonts/Richard_Samuels.otf") format("truetype");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(to bottom, #4ca4f7, #005cb1);
+  background: linear-gradient(to bottom, #4ca4f7, #005cb1);
 }
 
 .container {
-    display: flex;
-    height: 100vh;
+  display: flex;
+  height: 100vh;
 }
 
 .left-rocks {
-    flex: 1;
-    background-image: url("src/assets/images/left-rocks.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  flex: 1;
+  background-image: url("src/assets/images/left-rocks.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .middle-area {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
 
 .middle-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200%;
-    background-image: url("/scr/assets/images/background-fishes.svg");
-    background-repeat: repeat-y;
-    background-position: center bottom;
-    animation: animateBackground 60s linear infinite;
+  opacity: 0.6;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-image: url("/scr/assets/images/background-fishes.svg");
+  background-repeat: repeat-y;
+  background-position: center bottom;
+  animation: animate-background 60s linear infinite;
 }
 
-@keyframes animateBackground {
-    0% {
-        background-position: center bottom;
-    }
+@keyframes animate-background {
+  0% {
+    background-position: center bottom;
+  }
 
-    100% {
-        background-position: center top;
-    }
+  100% {
+    background-position: center top;
+  }
 }
 
 .middle-content {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
-
-.middle-image {
-    opacity: 0.6;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 .right-rocks {
-    flex: 1;
-    background-image: url("../../assets/images/right-rocks.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+  flex: 1;
+  background-image: url("../../assets/images/right-rocks.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .bubbles {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .bubbles span {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    background: rgb(105 167 237 / 46%);
-    margin: 0 4px;
-    border-radius: 50%;
-    box-shadow:
-        0 0 0 10px rgb(116 166 240 / 39.1%),
-        0 0 50px rgb(104 156 223),
-        0 0 100px rgb(31 85 140 / 41%);
-    animation: animate 15s linear infinite;
-    animation-duration: calc(250s / var(--i));
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: rgb(105 167 237 / 46%);
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 10px rgb(116 166 240 / 39.1%),
+    0 0 50px rgb(104 156 223),
+    0 0 100px rgb(31 85 140 / 41%);
+  animation: animate 15s linear infinite;
+  animation-duration: calc(250s / var(--i));
 }
 
 .bubbles span:nth-child(even) {
-    background: rgb(105 167 237 / 46%);
-    box-shadow:
-        0 0 0 20px rgb(116 166 240 / 39.1%),
-        0 0 50px rgb(104 156 223),
-        0 0 100px rgb(31 85 140 / 41%);
+  background: rgb(105 167 237 / 46%);
+  box-shadow:
+    0 0 0 20px rgb(116 166 240 / 39.1%),
+    0 0 50px rgb(104 156 223),
+    0 0 100px rgb(31 85 140 / 41%);
 }
 
 @keyframes animate {
-    0% {
-        top: 100vh;
-        transform: translateY(0) scale(0);
-    }
+  0% {
+    top: 100vh;
+    transform: translateY(0) scale(0);
+  }
 
-    100% {
-        top: -50vh;
-        transform: translateY(0) scale(1);
-    }
+  100% {
+    top: -50vh;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media (max-width <= 768px) {
-    .container {
-        flex-direction: column;
-    }
+  .container {
+    flex-direction: column;
+  }
 
-    .left-rocks,
-    .right-rocks {
-        flex-basis: 50%;
-        background-size: contain;
-    }
+  .left-rocks,
+  .right-rocks {
+    flex-basis: 50%;
+    background-size: contain;
+  }
 
-    .middle-area {
-        overflow: initial;
-    }
+  .middle-area {
+    overflow: initial;
+  }
 
-    .middle-content {
-        max-width: 100%;
-    }
+  .middle-content {
+    max-width: 100%;
+  }
 }
 
 .contenedor-juego {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-    background-image: url("../../assets/images/background-fishes.svg");
-    background-repeat: repeat; /* O repeat-x según tus necesidades */
-    background-size: auto; /* Modificación aquí */
-    background-position: center;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background-image: url("../../assets/images/background-fishes.svg");
+  background-repeat: repeat; /* O repeat-x según tus necesidades */
+  background-size: auto; /* Modificación aquí */
+  background-position: center;
 }
 
 .contenedor {
-    width: 100%;
-    height: 100vh;
-    margin: 0 auto;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
 }
 
 .container-buttons-game {
-    margin-left: 50px;
-    font-size: 30px;
+  margin-left: 50px;
+  font-size: 30px;
 }
-
+/* stylelint-disable selector-class-pattern */
 .restartButton {
-    width: 300px;
-    height: 100px;
-    background: transparent;
-    border: 2px;
-    outline: none;
-    border-radius: 47px;
-    cursor: pointer;
-    color: rgb(3 3 3);
-    font-weight: 500;
-    margin-left: 40px;
-    transition: 0.5s;
-    font-size: 35px;
-    font-family: "Richard Samuels";
+  width: 300px;
+  height: 100px;
+  background: transparent;
+  border: 2px;
+  outline: none;
+  border-radius: 47px;
+  cursor: pointer;
+  color: rgb(3 3 3);
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+  font-size: 35px;
+  font-family: "Richard Samuels", sans-serif;
 }
 
 .objeto {
-    width: 84px;
-    height: 84px;
-    position: absolute;
-    top: 22px;
-    left: 480px;
-    z-index: 2;
-    background: url("../../assets/images/dino.png") repeat-x 0 0;
-    background-size: 336px 84px;
-    background-position-x: 0;
+  width: 84px;
+  height: 84px;
+  position: absolute;
+  top: 22px;
+  left: 480px;
+  z-index: 2;
+  background: url("../../assets/images/dino.png") repeat-x 0 0;
+  background-size: 336px 84px;
+  background-position-x: 0;
 }
 
 .objeto-corriendo {
-    animation: animarObjeto 0.25s steps(2) infinite;
+  animation: animar-objeto 0.25s steps(2) infinite;
 }
 
 .espacio {
-    width: 1000px;
-    height: 200%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 1000px;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
 
-    /* background-size: 50% 42px; */
+  /* background-size: 50% 42px; */
 }
 
 .obstacle {
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 
-    /* Resto de estilos para posición y tamaño */
+  /* Resto de estilos para posición y tamaño */
 }
 
 .medusa {
-    width: 134px;
-    height: 134px;
-    position: absolute;
+  width: 134px;
+  height: 134px;
+  position: absolute;
 
-    /*  bottom: 1px; */
-    left: 600px;
-    z-index: 1;
-    background: url("../../assets/images/medusaenemigo134px.png") no-repeat;
+  /*  bottom: 1px; */
+  left: 600px;
+  z-index: 1;
+  background: url("../../assets/images/medusaenemigo134px.png") no-repeat;
 }
 
 .pulpo {
-    width: 134px;
-    height: 134px;
-    background: url("../../assets/images/pulpoenemigo134px.png") no-repeat;
+  width: 134px;
+  height: 134px;
+  background: url("../../assets/images/pulpoenemigo134px.png") no-repeat;
 }
 
 .tiburon {
-    width: 134px;
-    height: 134px;
-    background: url("../../assets/images/tiburonenemigo134.png") no-repeat;
+  width: 134px;
+  height: 134px;
+  background: url("../../assets/images/tiburonenemigo134.png") no-repeat;
 }
 
-@keyframes animarObjeto {
-    from {
-        background-position-x: -84px;
-    }
+@keyframes animar-objeto {
+  from {
+    background-position-x: -84px;
+  }
 
-    to {
-        background-position-x: -252px;
-    }
+  to {
+    background-position-x: -252px;
+  }
 }
+
+/* stylelint-disable indentation */

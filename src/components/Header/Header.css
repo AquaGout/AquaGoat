@@ -1,75 +1,77 @@
 .navigation {
-    display: flex;
-    padding: 20px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigation a {
-    position: relative;
-    color: rgb(6 5 5);
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
-    font-size: 35px;
+  position: relative;
+  color: rgb(6 5 5);
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+  font-size: 35px;
 }
 
 .navigation a::after {
-    content: "";
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: rgb(4 3 3);
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.5s;
+  content: "";
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 3px;
+  background: rgb(4 3 3);
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.5s;
 }
 
 .navigation a:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 .navigation .btn-login {
-    width: 300px;
-    height: 100px;
-    background: transparent;
-    border: 2px;
-    outline: none;
-    border-radius: 47px;
-    cursor: pointer;
-    color: rgb(3 3 3);
-    font-weight: 500;
-    margin-left: 40px;
-    transition: 0.5s;
-    font-size: 35px;
-    font-family: "Richard Samuels";
+  width: 300px;
+  height: 100px;
+  background: transparent;
+  border: 2px;
+  outline: none;
+  border-radius: 47px;
+  cursor: pointer;
+  color: rgb(3 3 3);
+  font-weight: 500;
+  margin-left: 40px;
+  transition: 0.5s;
+  font-size: 35px;
+  font-family: "Richard Samuels", sans-serif;
 }
 
 .navigation a:hover {
-    color: black; /* Color predeterminado cuando se hace hover */
+  color: black; /* Color predeterminado cuando se hace hover */
 }
 
 .navigation a:nth-child(1):hover {
-    color: #f9a200; /* Cambia el color del primer enlace cuando se hace hover */
+  color: #f9a200; /* Cambia el color del primer enlace cuando se hace hover */
 }
 
 .navigation a:nth-child(2):hover {
-    color: #5cbe00; /* Cambia el color del segundo enlace cuando se hace hover */
+  color: #5cbe00; /* Cambia el color del segundo enlace cuando se hace hover */
 }
 
 .navigation a:nth-child(3):hover {
-    color: #7e249c; /* Cambia el color del tercer enlace cuando se hace hover */
+  color: #7e249c; /* Cambia el color del tercer enlace cuando se hace hover */
 }
 
 .navigation .btn-login:hover {
-    background: white;
-    color: black;
+  background: white;
+  color: black;
+}
+/* stylelint-disable selector-id-pattern */
+#PlayNow:hover {
+  background: rgb(231 0 85); /* Cambia el color de fondo que desees */
+  color: white; /* Cambia el color de texto que desees */
 }
 
-#PlayNow:hover {
-    background: rgb(231 0 85); /* Cambia el color de fondo que desees */
-    color: white; /* Cambia el color de texto que desees */
-}
+/* stylelint-disable indentation */
