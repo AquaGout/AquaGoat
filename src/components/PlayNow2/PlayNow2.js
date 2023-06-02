@@ -1,4 +1,3 @@
-
 //* * LOGICA DE EL JUEGO **//
 //* * GAME LOOP **//
 //* * ESTA CORREINDO SOBRE LA RUTA MOVER A SCRIPT INDEPENDIENTE **//
@@ -7,7 +6,10 @@ let time = new Date();
 let deltaTime = 0;
 
 // esta funcion nos sirve para que se gargue todo el ecenario antes de comenzar el juego
-if (document.readyState === "complete" || document.readyState === "interactive") {
+if (
+  document.readyState === "complete" ||
+        document.readyState === "interactive"
+) {
   setTimeout(Init, 1);
 } else {
   document.addEventListener("DOMContentLoaded", Init);
@@ -50,10 +52,17 @@ const tiempoObstaculoMin = 0.7;
 const tiempoObstaculoMax = 1.8;
 /* const obstaculoPosY = 16; */
 const obstaculos = [];
+let score = 0;
+let paused = false;
 
 // aqui cargamos todas las funcionalidades que tiene el juego
 function Update() {
   console.log(parado);
+  if (paused) return;
+  score += deltaTime;
+  const roundedScore = Math.floor(score);
+  const scoreElement = document.querySelector(".score");
+  scoreElement.textContent = `Score: ${roundedScore}`;
   if (parado) return;
   MoverSuelo();
   DecidirCrearObstaculos();
@@ -62,7 +71,7 @@ function Update() {
   if (velY) velY -= gravedad * deltaTime;
 }
 /* boton no se esta usando
-        const transitionDuration = 0.3;  */// Duración de la transición en segundos
+      const transitionDuration = 0.3;  */ // Duración de la transición en segundos
 let isTransitioning = false; // Variable de estado para controlar la transición en curso
 const velocity = 1000; // Velocidad de movimiento en píxeles por segundo, ajusta este valor según tus preferencias
 
@@ -100,10 +109,19 @@ function startMoving(direction) {
     previousTime = currentTime;
 
     const displacement = velocity * deltaTime * direction;
-    objetoMoved = Math.max(0, Math.min(objetoMoved + displacement, contenedor.clientWidth - objeto.clientWidth));
+    objetoMoved = Math.max(
+      0,
+      Math.min(
+        objetoMoved + displacement,
+        contenedor.clientWidth - objeto.clientWidth
+      )
+    );
     objeto.style.left = objetoMoved + "px";
 
-    if (objetoMoved <= 0 || objetoMoved >= contenedor.clientWidth - objeto.clientWidth) {
+    if (
+      objetoMoved <= 0 ||
+            objetoMoved >= contenedor.clientWidth - objeto.clientWidth
+    ) {
       stopMoving();
     } else {
       animationFrameId = requestAnimationFrame(move);
@@ -162,7 +180,9 @@ function CrearObstaculo() {
   obstaculo.style.left = initialPosition + "px";
 
   obstaculos.push(obstaculo);
-  tiempoHastaObstaculo = tiempoObstaculoMin + Math.random() * (tiempoObstaculoMax - tiempoObstaculoMin) / gameVel;
+  tiempoHastaObstaculo =
+          tiempoObstaculoMin +
+          (Math.random() * (tiempoObstaculoMax - tiempoObstaculoMin)) / gameVel;
 }
 
 // funcionalidad para que los obstaculos aparencan en distintas posisines de la pantalla es rambon
@@ -192,7 +212,10 @@ function MoverObstaculos() {
     } else {
       obstaculos[i].posY -= CalcularDesplazamiento();
       obstaculos[i].style.top = obstaculos[i].posY + "px";
-      obstaculos[i].style.left = parseFloat(obstaculos[i].style.left) + obstaculos[i].velocidadX * deltaTime + "px";
+      obstaculos[i].style.left =
+              parseFloat(obstaculos[i].style.left) +
+              obstaculos[i].velocidadX * deltaTime +
+              "px";
     }
   }
 }
@@ -201,17 +224,17 @@ function MoverObstaculos() {
 // Crear botones de restart, pause y sonido.
 const restartButton = document.getElementById("restartButton");
 /*       const pauseButton = document.getElementById("pauseButton");
-        const soundButton = document.getElementById("soundButton"); */
+      const soundButton = document.getElementById("soundButton"); */
 // Agregarle la opción de poder clicar encima.
 restartButton.addEventListener("click", Init);
 
 /*       estan declaradas pero no se utilizan por ahora genera error
-        pauseButton.addEventListener("click", pauseGame);
-        soundButton.addEventListener("click", toggleSound); */
+      pauseButton.addEventListener("click", pauseGame);
+      soundButton.addEventListener("click", toggleSound); */
 
 /*       function restartGame() {
 
-        } */
+      } */
 
 function generarPecesFondo() {
   const cantidadPeces = 25;
@@ -225,9 +248,35 @@ function generarPecesFondo() {
     contenedor.appendChild(pez);
   }
 }
+/* Hacer que los botones de pause y sound-on se cambien por
+         play y sound-off cuando se hace click sobre ellos */
+const pauseButton = document.getElementById("pauseButton");
+pauseButton.addEventListener("click", function () {
+  if (pauseButton.classList.contains("playing")) {
+    pauseButton.style.backgroundImage =
+            "url(\"../../assets/icons/pause.svg\")";
+    pauseButton.classList.remove("playing");
+    paused = false;
+  } else {
+    pauseButton.style.backgroundImage =
+            "url(\"../../assets/icons/play.svg\")";
+    pauseButton.classList.add("playing");
+    paused = true;
+  }
+});
 
-// Obtener referencia al botón "soundButton"
 const soundButton = document.getElementById("soundButton");
+soundButton.addEventListener("click", function () {
+  if (soundButton.classList.contains("playing")) {
+    soundButton.style.backgroundImage =
+            "url(\"../../assets/icons/sound-on.svg\")";
+    soundButton.classList.remove("playing");
+  } else {
+    soundButton.style.backgroundImage =
+            "url(\"../../assets/icons/sound-off.svg\")";
+    soundButton.classList.add("playing");
+  }
+});
 
 // Crear elemento de audio
 const audio = new Audio("../../assets/audio/soundtrack.mp3");
@@ -249,3 +298,9 @@ function toggleSound() {
 // Agregar evento click al botón "soundButton"
 soundButton.addEventListener("click", toggleSound);
 
+
+const returnButton = document.getElementById("returnButton");
+
+returnButton.addEventListener("click", function() {
+  window.location.href = "../../index.html";
+});
