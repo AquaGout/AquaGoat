@@ -217,22 +217,34 @@ body {
   font-family: "Richard Samuels", sans-serif;
 }
 
-.objeto {
+/* .objeto {
   width: 84px;
   height: 84px;
+  position: absolute;
+  top: 22px;
+  z-index: 2;
+  background: url("../../assets/icons/swimming-cabriella.png") repeat-x 0 0;
+  background-size: 336px 84px;
+  background-position-x: 0;
+} */
+.objeto {
+  width: 100px;
+  height: 600px;
   position: absolute;
   top: 22px;
 
   /* left: 480px; */
   z-index: 2;
-  background: url("../../assets/images/dino.png") repeat-x 0 0;
-  background-size: 336px 84px;
+  background: url("../../assets/icons/swimming-cabriella.png") repeat-x 0 0;
   background-position-x: 0;
+
+  /* background-repeat: no-repeat; */
+  background-size: contain;
 }
 
-.objeto-corriendo {
+/* .objeto-corriendo {
   animation: animar-objeto 0.25s steps(2) infinite;
-}
+} */
 
 .espacio {
   width: 1000px;
