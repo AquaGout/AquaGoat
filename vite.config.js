@@ -1,7 +1,8 @@
 import path from "path";
-const isGitHubPages = true;
+const isGitHubPages = false;
 const folderName = path.basename(process.cwd()) + "/";
-const mode = process.env.NODE_ENV === "production" ? "production" : "development";
+const mode =
+  process.env.NODE_ENV === "production" ? "production" : "development";
 const base = mode === "production" && isGitHubPages ? "/" + folderName : "/";
 
 export default {
