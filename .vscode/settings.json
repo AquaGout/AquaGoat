@@ -2,7 +2,7 @@
 // https://github.com/antfu/vscode-file-nesting-config
 {
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
