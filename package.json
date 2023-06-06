@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "rm -rf dist && vite build",
     "preview": "vite preview",
-    "deploy": "vercel --prod"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "eslint": "^8.40.0",
