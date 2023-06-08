@@ -8,17 +8,100 @@
   <title>AquaGoat</title>
   <!-- Se cargan los estilos globales -->
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <script type="module" src="./index.js"></script>
+  <!-- <script type="module" src="./index.js"></script> -->
 </head>
 
 <body>
   <!-- Se cargan todos los componentes HTML, los cuales se capturan con JS -->
-  <header id="header"></header>
+  <!-- HEADER -->
+  <!-- HEADER -->
+  <!-- HEADER -->
+  <header id="header">
+    <nav class="navigation">
+      <a id='homeLink' href="#">Home</a>
+      <a id='howToPlay' href="#">How to play</a>
+      <a id='Share' href="#">Share</a>
+      <button id='PlayNow' class="btn-login">Play now!</button>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <!-- MAIN -->
+  <!-- MAIN -->
   <main id="content">
-    <div id="landingContent"></div>
+    <!-- Desarrollo de componente LandingContent SOLO HTML -->
+    <div id="landingContent">
+      <div class="spacer layer1"></div>
+
+      <div class="body-gradient ">
+        <div class="sup-container">
+          <div class="layer3">
+            <img src="/assets/images/blob-haikei.png" alt="">
+            <p class="game-description">Embark on an underwater odyssey with </p>
+            <p class="cabriela-text">Cabriela</p>
+            <p class="sub-description">Where thrilling challenges and
+              captivating discoveries await!</p>
+          </div>
+        </div>
+        <div class="inf-container">
+          <div class="enemy-description">
+            <div class="enemy-container">
+              <div class="enemy1"></div>
+              <img src="/assets/icons/shark.png" alt="shark">
+            </div>
+            <div class="enemy2">
+              <img src="/assets/icons/jellyfish.PNG" alt="jellyfish">
+
+            </div>
+            <div class="enemy3">
+              <img src="/assets/icons/octopus.png" alt="octopus">
+            </div>
+          </div>
+          <div class="enemy-text">
+            <div class="enemy-text1">
+              Keep safe from the fierce sharks lurking in the depths! You must dodge their sharp fins and teeth as you
+              glide towards your destination. </div>
+            <div class="enemy-text2">
+              Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to keep
+              progressing towards the ocean floor.
+            </div>
+            <div class="enemy-text3">
+              Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils to
+              ensure a safe journey through the underwater realm.
+            </div>
+          </div>
+
+          <div class="game-summary">
+          </div>
+        </div>
+      </div>
+      <div class="spacer2 layer2"></div>
+    </div>
   </main>
-  <footer id="footer"></footer>
-  <!-- Se carga el JS global -->
+
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-container">
+      <div class="follow-us">
+        <p>Follow us on</p>
+      </div>
+      <div class="social-media">
+        <img src="/assets/images/socialmedia.png">
+      </div>
+
+      <div class="copyright">
+        <p>copy Copyright AquaGoat 2023 - All rights reserved.</p>
+      </div>
+
+      <div class="buttons-container">
+        <a class="buttons-a" href="#">About Us</a>
+        <a class="buttons-a" href="#">Contact</a>
+        <a class="buttons-a" href="#">Share/FAQs</a>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
