@@ -10,8 +10,9 @@
   box-sizing: border-box;
 }
 
+
 body {
-  background: linear-gradient(to bottom, #4ca4f7, #005cb1);
+  background-color: linear-gradient(to bottom, #64d4f9, #64d4f9);
 }
 
 .container {

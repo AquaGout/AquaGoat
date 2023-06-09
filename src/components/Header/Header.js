@@ -56,4 +56,24 @@ export const Header = () => {
       footerContainer.style.display = "none";
     }
   });
+  // Get the shareLink element
+  const shareLink = document.getElementById("Share");
+  
+  // Get the modal and close button elements
+  const modal = document.getElementById("modal");
+  const closeButton = document.getElementsByClassName("close")[0];
+  
+  // Add a click event listener to the shareLink element
+  shareLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default link behavior
+  
+    // Display the modal
+    modal.style.display = "block";
+  });
+  
+  // Add a click event listener to the close button
+  closeButton.addEventListener("click", function () {
+    // Hide the modal
+    modal.style.display = "none";
+  });
 };
