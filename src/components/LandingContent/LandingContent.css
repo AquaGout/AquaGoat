@@ -81,7 +81,7 @@
   height: 100px;
 }
 
-. .spacer2 {
+.spacer2 {
   aspect-ratio: 680/200;
   width: 100%;
   background-repeat: no-repeat;
@@ -100,7 +100,7 @@
 }
 
 .body-gradient {
-  height: 3000px;
+  height: 3300px;
   margin-top: -7px;
   background: linear-gradient(to bottom, #4ca4f7, #005cb1);
   display: flex;
