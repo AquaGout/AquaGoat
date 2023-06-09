@@ -1,0 +1,73 @@
+/* stylelint-disable stylistic/indentation */
+@import url("../../assets/css/styles.css");
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #4ca4f7, #005cb1);
+    align-items: center;
+}
+
+.square {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+    color: white;
+    font-size: 80px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+button {
+  font-family: "Richard Samuels", sans-serif;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.collapsible {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 55px;
+}
+
+.collapsible:hover {
+  background-color: #4ca4f7;
+}
+
+.collapsible::after {
+  content: "\002B"; /* Unicode character for "plus" sign (+) */
+  font-size: 65px;
+  color: white;
+  float: right;
+  margin-left: 5px;
+}
+
+.active::after {
+  content: "\2212"; /* Unicode character for "minus" sign (-) */
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  width: 70%;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+}
+
+/* stylelint-disable indentation */
