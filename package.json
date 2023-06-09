@@ -24,6 +24,7 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
-    "vercel": "^30.1.0"
+    "vercel": "^30.1.0",
+    "wavify": "^1.0.0"
   }
 }
