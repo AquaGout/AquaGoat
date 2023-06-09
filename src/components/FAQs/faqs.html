@@ -8,6 +8,8 @@
     <title>AquaGoat</title>
     <!-- Se cargan los estilos globales -->
     <link rel="stylesheet" href="./faqs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
     <script type="module" src="./faqs.js"></script>
 </head>
 
@@ -25,69 +27,97 @@
     </header>
 
     <!-- MAIN -->
-    <div class="spacer layer1"></div>
-    <div class="container">
-        <div class="square">
-            <h1>FAQs</h1>
-            <button type="button" class="collapsible">¿Cuál es el objetivo de AquaGoat?</button>
-            <div class="content">
-                <p>El objetivo del juego es navegar a través de un peligroso océano evitando obstáculos y enemigos para
-                    llegar lo más lejos posible y obtener la puntuación más alta.
-                </p>
-            </div>
-            <button type="button" class="collapsible">¿Cuál es la mecánica del juego?</button>
-            <div class="content">
-                <p>El jugador controla una cabra que se desplaza hacia los lados. Debe utilizar las teclas de dirección
-                    para mover la cabra de un lado a otro y esquivar obstáculos, como
-                    medusas, tiburones y pulpos.
-                </p>
-            </div>
-            <button type="button" class="collapsible">¿Qué sucede si el jugador choca con un enemigo</button>
-            <div class="content">
-                <p>Si el jugador choca con un enemigo u obstáculo, perderá la partida y se le guardará el score mayor
-                    que haya logrado alcanzar.
-                </p>
-            </div>
-            <button type="button" class="collapsible">¿Se registra la puntuación del jugador?</button>
-            <div class="content">
-                <p>Sí, el juego registra la puntuación del jugador basada en la distancia recorrida antes de que termine
-                    la partida. El objetivo es superar la puntuación más alta, lo que agrega un elemento de competencia
-                    y rejugabilidad al juego.
-                </p>
-            </div>
-            <button type="button" class="collapsible"> ¿Hay alguna función de líderes o tabla de clasificación en el
-                juego?</button>
-            <div class="content">
-                <p> Actualmente estamos trabajando en implementar una tabla de clasificación en línea donde puedes
-                    ver tu puntuación y compararla con la de otros jugadores. Esto te permite competir por la puntuación
-                    más alta y ver qué tan bien te desempeñas en comparación con otros jugadores.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="spacer2 layer2"></div>
+    <main id="content">
+        <!-- Desarrollo de componente LandingContent SOLO HTML -->
+        <div id="landingContent">
 
-    <!-- FOOTER -->
-    <footer id="footer">
-        <div class="footer-container">
-            <div class="follow-us">
-                <p>Follow us on</p>
+            <div>
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave"
+                            d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="#005cb1" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="#1569b8" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="#1e77ca" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#4ca4f7" />
+                    </g>
+                </svg>
             </div>
-            <div class="social-media">
-                <img src="/assets/images/socialmedia.png">
+            <div class="container">
+                <div class="square">
+                    <h1>FAQs</h1>
+                    <button type="button" class="collapsible">¿Cuál es el objetivo de AquaGoat?</button>
+                    <div class="content">
+                        <p>El objetivo del juego es navegar a través de un peligroso océano evitando obstáculos y
+                            enemigos para
+                            llegar lo más lejos posible y obtener la puntuación más alta.
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible">¿Cuál es la mecánica del juego?</button>
+                    <div class="content">
+                        <p>El jugador controla una cabra que se desplaza hacia los lados. Debe utilizar las teclas de
+                            dirección
+                            para mover la cabra de un lado a otro y esquivar obstáculos, como
+                            medusas, tiburones y pulpos.
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible">¿Qué sucede si el jugador choca con un enemigo</button>
+                    <div class="content">
+                        <p>Si el jugador choca con un enemigo u obstáculo, perderá la partida y se le guardará el score
+                            mayor
+                            que haya logrado alcanzar.
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible">¿Se registra la puntuación del jugador?</button>
+                    <div class="content">
+                        <p>Sí, el juego registra la puntuación del jugador basada en la distancia recorrida antes de que
+                            termine
+                            la partida. El objetivo es superar la puntuación más alta, lo que agrega un elemento de
+                            competencia
+                            y rejugabilidad al juego.
+                        </p>
+                    </div>
+                    <button type="button" class="collapsible"> ¿Hay alguna función de líderes o tabla de clasificación
+                        en el
+                        juego?</button>
+                    <div class="content">
+                        <p> Actualmente estamos trabajando en implementar una tabla de clasificación en línea donde
+                            puedes
+                            ver tu puntuación y compararla con la de otros jugadores. Esto te permite competir por la
+                            puntuación
+                            más alta y ver qué tan bien te desempeñas en comparación con otros jugadores.
+                        </p>
+                    </div>
+                </div>
             </div>
+            <div class="spacer2 layer2"></div>
 
-            <div class="copyright">
-                <p>copy Copyright AquaGoat 2023 - All rights reserved.</p>
-            </div>
-
-            <div class="buttons-container">
-                <a class="buttons-a" href="#">About Us</a>
-                <a class="buttons-a" href="#">Contact</a>
-                <a class="buttons-a" href="components/FAQs/faqs.html">FAQs</a>
-            </div>
-        </div>
-    </footer>
+            <!-- FOOTER -->
+            <footer id="footer">
+                <div class="footer-container">
+                    <div class="follow-us">
+                        <p>Follow us on</p>
+                    </div>
+                    <div class="social-media">
+                        <div class="icons">
+                            <a href="#fb"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#ig"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="buttons-container">
+                        <a class="buttons-a" href="#">About Us</a>
+                        <a class="buttons-a" href="#">Contact</a>
+                        <a class="buttons-a" href="components/FAQs/faqs.html">FAQs</a>
+                    </div>
+                    <div class="copyright">
+                        <p> &#169; Copyright AquaGoat 2023 - All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
 </body>
 
 </html>
