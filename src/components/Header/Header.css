@@ -1,6 +1,11 @@
+#cabriella-shell{
+  height:600px;
+  width: max-content;
+}
 .navigation {
+  background-color: white;
+  padding-top: 10px;
   display: flex;
-  padding: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -49,7 +54,7 @@
 }
 
 .navigation a:hover {
-  color: black; /* Color predeterminado cuando se hace hover */
+  color: rgb(255 255 255); /* Color predeterminado cuando se hace hover */
 }
 
 .navigation a:nth-child(1):hover {

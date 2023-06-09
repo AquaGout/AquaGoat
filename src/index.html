@@ -32,12 +32,25 @@
   <main id="content">
     <!-- Desarrollo de componente LandingContent SOLO HTML -->
     <div id="landingContent">
-      <div class="spacer layer1"></div>
 
+      <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallax">
+            <use xlink:href="#gentle-wave" x="48" y="0" fill="#005cb1" />
+            <use xlink:href="#gentle-wave" x="48" y="3" fill="#1569b8" />
+            <use xlink:href="#gentle-wave" x="48" y="5" fill="#1e77ca" />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="#4ca4f7" />
+          </g>
+        </svg>
+      </div>
       <div class="body-gradient ">
         <div class="sup-container">
           <div class="layer3">
-            <img src="/assets/images/blob-haikei.png" alt="">
+            <img id="cabriella-shell" src="/assets/icons/cabriella-shell.svg" alt="">
             <p class="game-description">Embark on an underwater odyssey with </p>
             <p class="cabriela-text">Cabriela</p>
             <p class="sub-description">Where thrilling challenges and
@@ -76,6 +89,8 @@
           </div>
         </div>
       </div>
+
+
       <div class="spacer2 layer2"></div>
     </div>
   </main>
