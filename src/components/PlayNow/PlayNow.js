@@ -78,17 +78,16 @@ export const Playnow = () => {
 
         if (velY) velY -= gravedad * deltaTime;
       }
-      /* boton no se esta usando
-      const transitionDuration = 0.3;  */ // Duración de la transición en segundos
-      let isTransitioning = false; // Variable de estado para controlar la transición en curso
-      const velocity = 1000; // Velocidad de movimiento en píxeles por segundo, ajusta este valor según tus preferencias
+
+      let isTransitioning = false;
+      const velocity = 1000;
 
       let startTime = null;
       let previousTime = null;
       let animationFrameId = null;
 
       function HandleKeyDown(event) {
-        if (isTransitioning) return; // Si hay una transición en curso, salimos de la función
+        if (isTransitioning) return;
 
         if (event.key === "ArrowRight") {
           console.log("Tecla derecha presionada");
@@ -150,9 +149,6 @@ export const Playnow = () => {
       document.addEventListener("keydown", HandleKeyDown);
       document.addEventListener("keyup", HandleKeyUp);
 
-      // funcion para simular movimiento de las busbujas
-      // la cual es solo una imagen png que se recarga varias
-      // y corre en el eje y para simular movimiento
       function MoverSuelo() {
         sueloX += CalcularDesplazamiento();
         suelo.style.top = -(sueloX % contenedor.clientHeight) + "px";
@@ -171,7 +167,6 @@ export const Playnow = () => {
         }
       }
       // funcion para crear obstaculso radomn si nececida de estarlos creando uno por uno
-      // se pueden crean tantos obstaculos como sena necesarios
       function CrearObstaculo() {
         const obstaculo = document.createElement("div");
         contenedor.appendChild(obstaculo);
@@ -181,10 +176,10 @@ export const Playnow = () => {
         obstaculo.posY = contenedor.clientHeight;
         obstaculo.style.top = contenedor.clientHeight + "px";
 
-        const randomDirection = Math.random() * 2 - 1; // Número aleatorio entre -1 y 1
-        obstaculo.velocidadX = randomDirection * 200; // Ajusta la velocidad horizontal
+        const randomDirection = Math.random() * 2 - 1;
+        obstaculo.velocidadX = randomDirection * 200;
 
-        const initialPosition = randomDirection < 0 ? 750 : 250; // Posición inicial según la dirección
+        const initialPosition = randomDirection < 0 ? 750 : 250;
         obstaculo.style.left = initialPosition + "px";
 
         obstaculos.push(obstaculo);
@@ -194,7 +189,6 @@ export const Playnow = () => {
       }
 
       // funcionalidad para que los obstaculos aparencan en distintas posisines de la pantalla es rambon
-      // por ahora solo tiene tres movimientos 250px, 480px 750px se pueden cear mas.
       function getRandomLeft() {
         const randomNumber = Math.floor(Math.random() * 3); // Genera un número aleatorio entre 0 y 2
 
@@ -207,9 +201,7 @@ export const Playnow = () => {
         }
       }
       // funcionalidad que permite que los obstaculos se puevan hacia arriba simulando desplazamiento de la pantalla
-      // la velocidad es paralela a la pantalla y puede ser modificable
-      // funcionalidad que permite que los obstaculos se puevan hacia arriba simulando desplazamiento de la pantalla
-      // la velocidad es paralela a la pantalla y puede ser modificable
+      //  que permite que los obstaculos se puevan hacia arriba simulando desplazamiento de la pantalla
 
       function MoverObstaculos() {
         for (let i = obstaculos.length - 1; i >= 0; i--) {
@@ -228,24 +220,12 @@ export const Playnow = () => {
         }
       }
 
-      // mas javascript hecho por SARA.
-      // Crear botones de restart, pause y sonido.
       const restartButton = document.getElementById("restartButton");
-      /*       const pauseButton = document.getElementById("pauseButton");
-      const soundButton = document.getElementById("soundButton"); */
-      // Agregarle la opción de poder clicar encima.
+
       restartButton.addEventListener("click", () => {
         console.log("init");
         score = 0;
       });
-
-      /*       estan declaradas pero no se utilizan por ahora genera error
-      pauseButton.addEventListener("click", pauseGame);
-      soundButton.addEventListener("click", toggleSound); */
-
-      /*       function restartGame() {
-
-      } */
 
       function generarPecesFondo() {
         const cantidadPeces = 25;
@@ -253,14 +233,11 @@ export const Playnow = () => {
         for (let i = 0; i < cantidadPeces; i++) {
           const pez = document.createElement("div");
           pez.classList.add("fish");
-          pez.style.left = getRandomLeft() + "px"; // Utiliza getRandomLeft() para obtener una posición aleatoria
-          /* hay un error aqui / / pez.style.top = getRandomTop() + "px"; */ // Utiliza getRandomTop() para obtener una posición aleatoria
-
+          pez.style.left = getRandomLeft() + "px";
           contenedor.appendChild(pez);
         }
       }
-      /* Hacer que los botones de pause y sound-on se cambien por
-         play y sound-off cuando se hace click sobre ellos */
+
       const pauseButton = document.getElementById("pauseButton");
       pauseButton.addEventListener("click", function () {
         if (pauseButton.classList.contains("playing")) {
@@ -298,15 +275,14 @@ export const Playnow = () => {
       // Función para reproducir o pausar el audio
       function toggleSound() {
         if (soundOn) {
-          audio.pause(); // Pausar el audio
+          audio.pause();
           soundOn = false;
         } else {
-          audio.play(); // Reproducir el audio
+          audio.play();
           soundOn = true;
         }
       }
 
-      // Agregar evento click al botón "soundButton"
       soundButton.addEventListener("click", toggleSound);
 
       const returnButton = document.getElementById("returnButton");
@@ -315,17 +291,6 @@ export const Playnow = () => {
         window.location.href = "../../index.html";
       });
     });
-
-  // mas javascript
-  // mas javascript hecho por SARA.
-  // Crear botones de restart, pause y sonido.
-  /*   const restartButton = document.getElementById("restartButton");
-  const pauseButton = document.getElementById("pauseButton");
-  const soundButton = document.getElementById("soundButton");
-
-  restartButton.addEventListener("click", Init);
-  pauseButton.addEventListener("click", pauseGame);
-  soundButton.addEventListener("click", toggleSound); */
 
   console.log("Playnow");
 };

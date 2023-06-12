@@ -18,7 +18,6 @@ body {
 .container {
   display: flex;
 
-  /* height: 100vh; */
 }
 
 .container-play {
@@ -71,7 +70,6 @@ body {
   max-width: 100%;
   height: auto;
 }
-/* stylelint-disable selector-class-pattern */
 .PlayNow {
   position: relative;
 }
@@ -152,8 +150,8 @@ body {
   position: relative;
   overflow: hidden;
   background-image: url("../../assets/images/background-fishes.svg");
-  background-repeat: repeat; /* O repeat-x según tus necesidades */
-  background-size: auto; /* Modificación aquí */
+  background-repeat: repeat;
+  background-size: auto; 
   background-position: center;
 }
 
@@ -189,12 +187,12 @@ body {
 
 .score {
   position: absolute;
-  top: 200px; /* Ajusta la posición vertical del score */
+  top: 200px; 
   left: 25%;
   transform: translateX(-50%);
   z-index: 2;
   font-family: "Richard Samuels", sans-serif;
-  font-size: 60px; /* Ajusta el tamaño del score */
+  font-size: 60px; 
   font-weight: bold;
   color: #fff;
   background-color: rgb(0 0 0 / 50%);
@@ -218,34 +216,17 @@ body {
   font-family: "Richard Samuels", sans-serif;
 }
 
-/* .objeto {
-  width: 84px;
-  height: 84px;
-  position: absolute;
-  top: 22px;
-  z-index: 2;
-  background: url("../../assets/icons/swimming-cabriella.png") repeat-x 0 0;
-  background-size: 336px 84px;
-  background-position-x: 0;
-} */
 .objeto {
   width: 100px;
   height: 600px;
   position: absolute;
   top: 22px;
 
-  /* left: 480px; */
   z-index: 2;
   background: url("../../assets/icons/swimming-cabriella.png") repeat-x 0 0;
   background-position-x: 0;
-
-  /* background-repeat: no-repeat; */
   background-size: contain;
 }
-
-/* .objeto-corriendo {
-  animation: animar-objeto 0.25s steps(2) infinite;
-} */
 
 .espacio {
   width: 1000px;
@@ -253,15 +234,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-
-  /* background-size: 50% 42px; */
 }
 
 .obstacle {
   position: absolute;
   top: 0;
-
-  /* Resto de estilos para posición y tamaño */
 }
 
 .medusa {
@@ -286,7 +263,6 @@ body {
   height: 134px;
   background: url("../../assets/images/tiburonenemigo134.png") no-repeat;
 }
-/* stylelint-disable selector-id-pattern */
 #returnButton {
   background-image: url("../../assets/icons/return.svg");
   background-color: transparent;
@@ -345,5 +321,3 @@ body {
     background-position-x: -252px;
   }
 }
-
-/* stylelint-disable indentation */

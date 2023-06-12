@@ -9,7 +9,6 @@ export const Footer = () => {
       document.getElementById("footer").innerHTML = html;
     });
 
-  // mas javascript
   console.log("Component Footer");
   const viewBtn = document.querySelector(".view-modal");
   const popup = document.querySelector(".popup");
