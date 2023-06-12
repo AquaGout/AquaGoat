@@ -87,19 +87,22 @@ export const Playnow = () => {
       let animationFrameId = null;
 
       function HandleKeyDown(event) {
-        if (isTransitioning) return;
+        if (isTransitioning) return; // Si hay una transición en curso, salimos de la función
 
         if (event.key === "ArrowRight") {
           console.log("Tecla derecha presionada");
-          startMoving(1);
+          startMoving(1, 0); // Que se mueva hacia la derecha
         } else if (event.key === "ArrowLeft") {
           console.log("Tecla izquierda presionada");
-          startMoving(-1);
+          startMoving(-1, 0); // Que se mueva hacia la izq
+        } else if (event.key === "ArrowDown") {
+          console.log("Tecla abajo presionada");
+          startMoving(0, 1); // Que se mueva hacia abajo
         }
       }
 
       function HandleKeyUp(event) {
-        if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+        if (event.key === "ArrowRight"  event.key === "ArrowLeft"  event.key === "ArrowDown") {
           console.log("Tecla soltada");
           stopMoving();
         }
