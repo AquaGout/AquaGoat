@@ -1,4 +1,3 @@
-/* stylelint-disable stylistic/indentation */
 @import url("../../assets/css/styles.css");
 
 /***************************************************
@@ -284,7 +283,7 @@ p {
 }
 
 .collapsible::after {
-  content: "\002B"; /* Unicode character for "plus" sign (+) */
+  content: "\002B"; 
   font-size: 65px;
   color: white;
   float: right;
@@ -292,7 +291,7 @@ p {
 }
 
 .active::after {
-  content: "\2212"; /* Unicode character for "minus" sign (-) */
+  content: "\2212"; 
 }
 
 .content {
@@ -457,4 +456,3 @@ footer {
   border: 1px solid #e1e1e1;
 }
 
-/* stylelint-disable indentation */

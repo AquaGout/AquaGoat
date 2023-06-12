@@ -78,9 +78,7 @@ export const Playnow = () => {
 
         if (velY) velY -= gravedad * deltaTime;
       }
-      /* boton no se esta usando
-      const transitionDuration = 0.3;  */ // Duración de la transición en segundos
-      let isTransitioning = false; // Variable de estado para controlar la transición en curso
+
       const velocity = 1000; // Velocidad de movimiento en píxeles por segundo, ajusta este valor según tus preferencias
 
       let startTime = null;
@@ -228,24 +226,12 @@ export const Playnow = () => {
         }
       }
 
-      // mas javascript hecho por SARA.
-      // Crear botones de restart, pause y sonido.
       const restartButton = document.getElementById("restartButton");
-      /*       const pauseButton = document.getElementById("pauseButton");
-      const soundButton = document.getElementById("soundButton"); */
-      // Agregarle la opción de poder clicar encima.
+
       restartButton.addEventListener("click", () => {
         console.log("init");
         score = 0;
       });
-
-      /*       estan declaradas pero no se utilizan por ahora genera error
-      pauseButton.addEventListener("click", pauseGame);
-      soundButton.addEventListener("click", toggleSound); */
-
-      /*       function restartGame() {
-
-      } */
 
       function generarPecesFondo() {
         const cantidadPeces = 25;
@@ -254,7 +240,6 @@ export const Playnow = () => {
           const pez = document.createElement("div");
           pez.classList.add("fish");
           pez.style.left = getRandomLeft() + "px"; // Utiliza getRandomLeft() para obtener una posición aleatoria
-          /* hay un error aqui / / pez.style.top = getRandomTop() + "px"; */ // Utiliza getRandomTop() para obtener una posición aleatoria
 
           contenedor.appendChild(pez);
         }
@@ -290,7 +275,7 @@ export const Playnow = () => {
       });
 
       // Crear elemento de audio
-      const audio = new Audio("../../assets/audio/soundtrack.mp3");
+      const audio = new Audio("../assets/audio/soundtrack.mp3");
 
       // Variable para controlar el estado del sonido
       let soundOn = true;
@@ -298,15 +283,14 @@ export const Playnow = () => {
       // Función para reproducir o pausar el audio
       function toggleSound() {
         if (soundOn) {
-          audio.pause(); // Pausar el audio
+          audio.pause();
           soundOn = false;
         } else {
-          audio.play(); // Reproducir el audio
+          audio.play();
           soundOn = true;
         }
       }
 
-      // Agregar evento click al botón "soundButton"
       soundButton.addEventListener("click", toggleSound);
 
       const returnButton = document.getElementById("returnButton");
