@@ -48,29 +48,7 @@
   font-size: 35px;
   font-family: "Richard Samuels", sans-serif;
 }
-
-.navigation a:hover {
-  color: rgb(255 255 255); /* Color predeterminado cuando se hace hover */
-}
-
-.navigation a:nth-child(1):hover {
-  color: #f9a200; /* Cambia el color del primer enlace cuando se hace hover */
-}
-
-.navigation a:nth-child(2):hover {
-  color: #5cbe00; /* Cambia el color del segundo enlace cuando se hace hover */
-}
-
-.navigation a:nth-child(3):hover {
-  color: #7e249c; /* Cambia el color del tercer enlace cuando se hace hover */
-}
-
-.navigation .btn-login:hover {
-  background: white;
-  color: black;
-}
 /* stylelint-disable selector-id-pattern */
-#PlayNow1:hover,
 #PlayNow2:hover {
   background: rgb(14 62 138); /* Cambia el color de fondo que desees */
   color: white; /* Cambia el color de texto que desees */
