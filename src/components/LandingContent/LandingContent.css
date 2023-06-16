@@ -1,20 +1,245 @@
 /* Se crea todo el CSS del footer que despues se importa en el stylesheet global */
-.container {
+main {
+  height: 1740px;
+}
+
+body {
+  background-color: transparent;
+  overflow:hidden;
+}
+
+#landingContent {
+  margin-top: -10px;
+  background: linear-gradient(to bottom, #4ca4f7, #005cb1);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  height: 1350px;
 }
 
-.spacer {
-  aspect-ratio: 1000/50;
-  height: 100%;
+.landingContent-container{
+  margin-bottom: 500px;
+}
+.slick-carousel {
+  z-index: 1;
+  height: 1150px;
+  width: 1500px;
+  overflow: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.welcome {
+  display: flex;
+  align-items: center;
+  text-shadow: 1px -1px 3px #7badf4;
+}
+
+#cabriella-shell {
+  height: 700px;
+  top: 150px;
+}
+
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+  text-shadow: 1px -1px 3px #8e71e6;
+}
+
+.game-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  text-align: center;
+  color: #e5eefd;
+  text-shadow: 6px 1px 16px #a2c7fb;
+}
+
+.cabriela-text {
+  color: #d4c8fd;
+  text-shadow: 6px 1px 16px #a5b5f3;
+  font-size: 80px;
+  margin: 0%;
+  text-align: center;
+}
+
+.sub-description {
+  color: #2b2a55;
+  text-align: center;
+}
+
+.game-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 400px;
+  font-size: 60px;
+}
+
+.elevator-pitch {
+  width: 1300px;
+  margin-left: 140px;
+  margin-top:40px;
+  text-align: center;
+  color: #e5eefd;
+  text-shadow: 4px 3px 10px #21467a;
+}
+
+.enemies {
+  display: flex;
+  align-items: center;
+  font-size: 90px;
+  justify-content: space-between;
+  margin-top: 200px;
+  text-shadow: 4px 3px 10px #21467a;
+}
+
+.inf-container {
+  display: flex;
+  align-items: center;
+  height: 1100px;
+  width: 1500px;
+}
+
+.enemy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enemy-description {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.beware-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  text-align: center;
+  color: #e5eefd;
+  text-shadow: 6px 6px 16px #a2c7fb;
+}
+
+.enemy1 img {
+  height: 260px;
+  width: 260px;
+}
+
+.enemy2 img {
+  height: 260px;
+  width: 260px;
+  margin-top: 80px;
+}
+
+.enemy3 img {
+  height: 260px;
+  width: 260px;
+  margin-top: 80px;
+}
+
+.enemy-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30px;
+}
+
+.enemy-text1 {
+  height: 20px;
   width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  margin-top: -40px;
+}
+
+.enemy-text2 {
+  height: 20px;
+  width: 100%;
+  margin-top: 280px;
+}
+
+.enemy-text3 {
+  height: 20px;
+  width: 100%;
+  margin-top: 300px;
+}
+
+.how-to-play {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 170px;
+  font-size: 90px;
+}
+
+.how-to-play-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  text-align: center;
+  color: #e5eefd;
+  text-shadow: 6px 6px 16px #a2c7fb;
+}
+
+.how-to-play-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-to-play-animation {
+  width: 500px;
+  height: 500px;
+  color: red;
+}
+
+.how-to-play-content-text {
+  text-align: center;
+  margin-left: 10px;
+  color: #e5eefd;
+  text-shadow: 4px 3px 10px #21467a;
+  width: 1400px;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.play-button {
+  width: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  
+}
+
+
+#play-button{
+  background: transparent;
+  border: 2px;
+  outline: none;
+  border-radius: 47px;
+  cursor: pointer;
+  color: rgb(3 3 3);
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 35px;
+}
+#play-button:hover{
+  background: rgb(231 0 85); /* Cambia el color de fondo que desees */
+  background-color: transparent;
 }
 
 .waves {
@@ -24,20 +249,6 @@
   margin-bottom: -7px;
   min-height: 80px;
   max-height: 180px;
-}
-
-.content {
-  position: relative;
-  height: 20vh;
-  text-align: center;
-  background-color: white;
-}
-
-.sup-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .parallax > use {
@@ -81,344 +292,15 @@
   }
 }
 
-#Layer_1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  margin-top: 50px;
-}
-
-@keyframes animate-svg-fill-1 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-@keyframes animate-svg-fill-1 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-.svg-elem-1 {
-  animation: animate-svg-fill-1 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both;
-  animation: animate-svg-fill-1 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s both;
-}
-
-@keyframes animate-svg-fill-2 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-@keyframes animate-svg-fill-2 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-.svg-elem-2 {
-  animation: animate-svg-fill-2 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
-  animation: animate-svg-fill-2 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.5s both;
-}
-
-@keyframes animate-svg-fill-3 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-@keyframes animate-svg-fill-3 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-.svg-elem-3 {
-  animation: animate-svg-fill-3 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s both;
-  animation: animate-svg-fill-3 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.7s both;
-}
-
-@keyframes animate-svg-fill-4 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-@keyframes animate-svg-fill-4 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-.svg-elem-4 {
-  animation: animate-svg-fill-4 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9000000000000001s both;
-  animation: animate-svg-fill-4 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 0.9000000000000001s both;
-}
-
-@keyframes animate-svg-fill-5 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-@keyframes animate-svg-fill-5 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-.svg-elem-5 {
-  animation: animate-svg-fill-5 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s both;
-  animation: animate-svg-fill-5 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.1s both;
-}
-
-@keyframes animate-svg-fill-6 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-@keyframes animate-svg-fill-6 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-.svg-elem-6 {
-  animation: animate-svg-fill-6 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s both;
-  animation: animate-svg-fill-6 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.3s both;
-}
-
-@keyframes animate-svg-fill-7 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-@keyframes animate-svg-fill-7 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-.svg-elem-7 {
-  animation: animate-svg-fill-7 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5000000000000002s both;
-  animation: animate-svg-fill-7 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.5000000000000002s both;
-}
-
-@keyframes animate-svg-fill-8 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-@keyframes animate-svg-fill-8 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(0 84 158);
-  }
-}
-
-.svg-elem-8 {
-  animation: animate-svg-fill-8 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7000000000000002s both;
-  animation: animate-svg-fill-8 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.7000000000000002s both;
-}
-
-@keyframes animate-svg-fill-9 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(255 255 255);
-  }
-}
-
-@keyframes animate-svg-fill-9 {
-  0% {
-    fill: transparent;
-  }
-
-  100% {
-    fill: rgb(255 255 255);
-  }
-}
-
-.svg-elem-9 {
-  animation: animate-svg-fill-9 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.9000000000000001s both;
-  animation: animate-svg-fill-9 0.8s cubic-bezier(0.47, 0, 0.745, 0.715) 1.9000000000000001s both;
-}
-
-.spacer2 {
-  aspect-ratio: 680/200;
-  width: 100%;
+.bottom-decoration {
+  aspect-ratio: 23/14;
+  size-adjust: initial;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
+  bottom: 1340px;
+  background-image: url("../../assets/images/underwater-background.svg");
+
 }
 
-.layer2 {
-  background-image: url("../../assets/images/layered-waves-haikei-8.svg");
-}
-
-.footer {
-  width: 100%;
-  background: #ff9f61;
-}
-
-.body-gradient {
-  height: 100%;
-  margin-top: -7px;
-  background: linear-gradient(to bottom, #4ca4f7, #005cb1);
-  display: flex;
-  flex-direction: column;
-}
-
-.layer3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.game-description {
-  margin-top: 70px;
-  font-size: 80px;
-  text-align: center;
-}
-
-.cabriela-text {
-  color: #b02568;
-  font-size: 90px;
-  margin: 0%;
-}
-
-.sub-description {
-  color: #2b2a55;
-}
-
-.inf-container {
-  display: flex;
-  align-items: center;
-  padding-top: 20%;
-  padding-left: 10%;
-}
-
-.enemy-container {
-  display: flex;
-  align-items: center;
-}
-
-.enemy-description {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width: 600px;
-}
-
-.enemy1 img {
-  max-height: 300px;
-  max-width: 300px;
-}
-
-.enemy2 img {
-  height: 500px;
-  width: 500px;
-  margin-top: 80px;
-  margin-right: 80px;
-}
-
-.enemy3 img {
-  height: 500px;
-  width: 500px;
-  margin-right: 80px;
-  margin-top: 80px;
-}
-
-.enemy-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.enemy-text1 {
-  height: 250px;
-  width: 100%;
-}
-
-.enemy-text2 {
-  height: 250px;
-  width: 100%;
-  margin-top: 290px;
-}
-
-.enemy-text3 {
-  height: 250px;
-  width: 100%;
-  margin-top: 330px;
-}

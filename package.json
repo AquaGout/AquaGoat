@@ -24,6 +24,9 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "jquery": "^3.7.0",
+    "slick": "^1.12.2",
+    "slick-carousel": "^1.8.1",
     "vercel": "^30.1.0",
     "wavify": "^1.0.0"
   }
