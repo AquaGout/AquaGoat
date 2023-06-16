@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
-
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./slick-1.8.1/slick/slick-theme.css" />
 </head>
 
 <body>
@@ -20,22 +21,25 @@
   <!-- HEADER -->
   <header id="header">
     <nav class="navigation">
-      <a id="homeLink" href=" #">Home</a>
-      <a id="howToPlay" href=" #">How to play</a>
-      <a id="Share" href=" #">Share</a>
       <button id="PlayNow" onclick="location.href='https://aquagout.github.io/AquaGout-Game/'" class=" btn-login">Play
         now!</button>
     </nav>
-  </header>
 
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>This is the share pop-up!</p>
-      <!-- Add your share content here -->
+    <div>
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="#005cb1" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="#1569b8" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="#1e77ca" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#4ca4f7" />
+        </g>
+      </svg>
     </div>
-  </div>
-
+  </header>
   <!-- MAIN -->
   <!-- MAIN -->
   <!-- MAIN -->
@@ -43,100 +47,113 @@
     <!-- Desarrollo de componente LandingContent SOLO HTML -->
     <div id="landingContent">
 
-      <div>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-          <defs>
-            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-          </defs>
-          <g class="parallax">
-            <use xlink:href="#gentle-wave" x="48" y="0" fill="#005cb1" />
-            <use xlink:href="#gentle-wave" x="48" y="3" fill="#1569b8" />
-            <use xlink:href="#gentle-wave" x="48" y="5" fill="#1e77ca" />
-            <use xlink:href="#gentle-wave" x="48" y="7" fill="#4ca4f7" />
-          </g>
-        </svg>
+      <div class="landingContent-container">
+        <div class="slick-carousel">
+          <div class="welcome">
+            <div class="welcome-text">
+              <img id="cabriella-shell" src="/assets/icons/cabriella-shell.svg" alt="">
+              <p class="game-description">Embark on an underwater odyssey with </p>
+              <p class="cabriela-text">Cabriela</p>
+              <p class="sub-description">Where thrilling challenges and
+                captivating discoveries await!</p>
+            </div>
+          </div>
+          <div class="game-summary">
+            <p class="elevator-pitch">Are you ready to dive into an exciting and magical adventure in the depths of the
+              sea?
+            </p>
+            <p class="elevator-pitch">Join our hybrid heroine, the goat-mermaid, and discover an underwater world full
+              of dangers and
+              wonders!
+            </p>
+          </div>
+          <div class="enemies">
+            <div class="beware-sign">
+              <p class="beware">Beware!</p>
+            </div>
+            <div class="inf-container">
+              <div class="enemy-description">
+                <div class="enemy-container">
+                  <div class="enemy1">
+                    <img src="/assets/images/shark-square.png" alt="shark">
+                  </div>
+                  <div class="enemy2">
+                    <img src="/assets/images/jellyfish-square.png" alt="jellyfish">
+
+                  </div>
+                  <div class="enemy3">
+                    <img src="/assets/images/octopus-square.png" alt="octopus">
+                  </div>
+                </div>
+              </div>
+
+              <div class="enemy-text">
+                <div class="enemy-text1">
+                  Keep safe from the fierce sharks lurking in the depths! You must dodge their sharp fins and teeth
+                  as you
+                  glide towards your destination. </div>
+                <div class="enemy-text2">
+                  Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to
+                  keep
+                  progressing towards the ocean floor.
+                </div>
+                <div class="enemy-text3">
+                  Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils
+                  to
+                  ensure a safe journey through the underwater realm.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="how-to-play">
+            <div class="how-to-play-header">
+              <p class="how-to-play-text">
+                How to play
+              </p>
+              <div class="how-to-play-content">
+                <div class="how-to-play-animation">
+
+                </div>
+                <div class="how-to-play-content-text">
+                  <p>
+                    Navigate the Goat-Mermaid using the left and right arrow keys to evade enemies. Colliding with an
+                    enemy results in game over. Test your survival skills and aim to endure for as long as possible.
+                    Best
+                    of luck in this challenging adventure!
+                  </p>
+                </div>
+              </div>
+              <nav class="navigation">
+                <button id="PlayNow" onclick="location.href='https://aquagout.github.io/AquaGout-Game/'"
+                  class=" btn-login">Play
+                  now!</button>
+              </nav>
+            </div>
+          </div>
+
+        </div>
       </div>
+
       <div class="layer3">
         <section class="container">
 
-
-          <div class="slick-carousel">
-            <div class="welcome">x</div>
-            <div class="enemies">x</div>
-            <div class="how-to-play">x</div>
-            <div class="faqs">x</div>
-            <div class="about-us">x</div>
-
-          </div>
-          <div class="slider-wrapper">
-            <div class="slider">
-              <div class="slide" id="slide-1">
-                <img id="cabriella-shell" src="/assets/icons/cabriella-shell.svg" alt="">
-                <p class="game-description">Embark on an underwater odyssey with </p>
-                <p class="cabriela-text">Cabriela</p>
-                <p class="sub-description">Where thrilling challenges and
-                  captivating discoveries await!</p>
-              </div>
-              <div class="slide" id="slide-2">
-                <div class="inf-container">
-                  <div class="enemy-description">
-                    <div class="enemy-container">
-                      <div class="enemy1"></div>
-                      <img src="/assets/icons/shark.png" alt="shark">
-                    </div>
-                    <div class="enemy2">
-                      <img src="/assets/icons/jellyfish.PNG" alt="jellyfish">
-
-                    </div>
-                    <div class="enemy3">
-                      <img src="/assets/icons/octopus.png" alt="octopus">
-                    </div>
-                  </div>
-                  <div class="enemy-text">
-                    <div class="enemy-text1">
-                      Keep safe from the fierce sharks lurking in the depths! You must dodge their sharp fins and teeth
-                      as you
-                      glide towards your destination. </div>
-                    <div class="enemy-text2">
-                      Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to
-                      keep
-                      progressing towards the ocean floor.
-                    </div>
-                    <div class="enemy-text3">
-                      Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils
-                      to
-                      ensure a safe journey through the underwater realm.
-                    </div>
-                  </div>
-                </div>
-                <div class="slide" id="slide-3">
-                  <div class="game-summary">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slider-nav">
-              <a href="#slide-1"></a>
-              <a href="#slide-2"></a>
-              <a href="#slide-3"></a>
-            </div>
         </section>
       </div>
     </div>
 
     </div>
     </div>
-    <div class="spacer2 layer2"></div>
+    </div>
+    <div class="bottom-decoration"></div>
   </main>
 
   <!-- FOOTER -->
   <!-- FOOTER -->
   <!-- FOOTER -->
-  <footer id="footer">
+  <footer>
     <div class="footer-container">
       <div class="follow-us">
-        <p>Follow us on</p>
+        <p>Follow us on: </p>
       </div>
       <div class="social-media">
         <div class="icons">
@@ -145,16 +162,18 @@
           <a href="#ig"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
-      <div class="buttons-container">
-        <a class="buttons-a" href="#">About Us</a>
-        <a class="buttons-a" href="#">Contact</a>
-        <a class="buttons-a" href="components/FAQs/faqs.html">FAQs</a>
-      </div>
-      <div class="copyright">
-        <p> &#169; Copyright AquaGoat 2023 - All rights reserved.</p>
-      </div>
-    </div>
+
   </footer>
+  <div class="copyright">
+    <p> &#169; Copyright AquaGoat 2023 - All rights reserved.</p>
+  </div>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script type="text/javascript" src="components/LandingContent/LandingContent.js"></script>
+
+
 </body>
 
 </html>
