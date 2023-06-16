@@ -5,7 +5,7 @@ main {
 
 body {
   background-color: transparent;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 #landingContent {
@@ -18,9 +18,10 @@ body {
   height: 1350px;
 }
 
-.landingContent-container{
+.landingContent-container {
   margin-bottom: 500px;
 }
+
 .slick-carousel {
   z-index: 1;
   height: 1150px;
@@ -30,7 +31,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 
 .welcome {
   display: flex;
@@ -86,7 +86,7 @@ body {
 .elevator-pitch {
   width: 1300px;
   margin-left: 140px;
-  margin-top:40px;
+  margin-top: 40px;
   text-align: center;
   color: #e5eefd;
   text-shadow: 4px 3px 10px #21467a;
@@ -222,11 +222,9 @@ body {
   justify-content: center;
   align-items: center;
   background-color: white;
-  
 }
 
-
-#play-button{
+#play-button {
   background: transparent;
   border: 2px;
   outline: none;
@@ -237,7 +235,8 @@ body {
   transition: 0.5s;
   font-size: 35px;
 }
-#play-button:hover{
+
+#play-button:hover {
   background: rgb(231 0 85); /* Cambia el color de fondo que desees */
   background-color: transparent;
 }
@@ -301,6 +300,4 @@ body {
   position: relative;
   bottom: 1340px;
   background-image: url("../../assets/images/underwater-background.svg");
-
 }
-

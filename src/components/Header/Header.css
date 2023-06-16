@@ -1,4 +1,3 @@
-
 .navigation {
   background-color: transparent;
   padding-top: 10px;
@@ -42,7 +41,7 @@
   outline: none;
   border-radius: 47px;
   cursor: pointer;
-  color: rgb(17, 66, 134);
+  color: rgb(17 66 134);
   font-weight: 500;
   margin-left: 40px;
   transition: 0.5s;
@@ -71,8 +70,9 @@
   color: black;
 }
 /* stylelint-disable selector-id-pattern */
-#PlayNow:hover {
-  background: rgb(14, 62, 138); /* Cambia el color de fondo que desees */
+#PlayNow1:hover,
+#PlayNow2:hover {
+  background: rgb(14 62 138); /* Cambia el color de fondo que desees */
   color: white; /* Cambia el color de texto que desees */
 }
 
