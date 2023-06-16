@@ -20,20 +20,21 @@
   <!-- HEADER -->
   <!-- HEADER -->
   <header id="header">
+    <div class="header-sky">
 
-    <div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="#005cb1" />
-          <use xlink:href="#gentle-wave" x="48" y="3" fill="#1569b8" />
-          <use xlink:href="#gentle-wave" x="48" y="5" fill="#1e77ca" />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="#4ca4f7" />
-        </g>
-      </svg>
+    </div>
+    <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="#005cb1" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="#1569b8" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="#1e77ca" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="#4ca4f7" />
+      </g>
+    </svg>
     </div>
   </header>
   <!-- MAIN -->
@@ -89,14 +90,15 @@
                   as you
                   glide towards your destination. </div>
                 <div class="enemy-text2">
-                  Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to
-                  keep
-                  progressing towards the ocean floor.
-                </div>
-                <div class="enemy-text3">
                   Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils
                   to
                   ensure a safe journey through the underwater realm.
+
+                </div>
+                <div class="enemy-text3">
+                  Octopuses will also cross your path. Stay calm and avoid their graceful movements to
+                  keep
+                  progressing towards the ocean floor.
                 </div>
               </div>
             </div>
@@ -169,15 +171,15 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function () {
-  $(".slick-carousel").slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    autoplay: false,
-  });
-});
+      $(".slick-carousel").slick({
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: true,
+        autoplay: false,
+      });
+    });
 
   </script>
 
