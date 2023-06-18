@@ -15,177 +15,216 @@
 </head>
 
 <body>
-  <!-- Se cargan todos los componentes HTML, los cuales se capturan con JS -->
-  <!-- HEADER -->
-  <!-- HEADER -->
-  <!-- HEADER -->
-  <header id="header">
-    <nav class="navigation">
-      <button id="PlayNow" onclick="location.href='https://aquagout.github.io/AquaGout-Game/'" class=" btn-login">Play
-        now!</button>
-    </nav>
 
-    <div>
-      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g class="parallax">
-          <use xlink:href="#gentle-wave" x="48" y="0" fill="#005cb1" />
-          <use xlink:href="#gentle-wave" x="48" y="3" fill="#1569b8" />
-          <use xlink:href="#gentle-wave" x="48" y="5" fill="#1e77ca" />
-          <use xlink:href="#gentle-wave" x="48" y="7" fill="#4ca4f7" />
-        </g>
-      </svg>
+  <header>
+    <a href="#" class="brand">AquaGoat</a>
+    <div class="menu-btn">M</div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="#">Home</a>
+        <a href="#">How to play</a>
+        <a href="#">FAQs</a>
+        <a href="#">About us</a>
+        <a href="#">Play now!</a>
+      </div>
     </div>
   </header>
-  <!-- MAIN -->
-  <!-- MAIN -->
-  <!-- MAIN -->
-  <main id="content">
-    <!-- Desarrollo de componente LandingContent SOLO HTML -->
-    <div id="landingContent">
 
-      <div class="landingContent-container">
-        <div class="slick-carousel">
-          <div class="welcome">
-            <div class="welcome-text">
-              <img id="cabriella-shell" src="/assets/icons/cabriella-shell.svg" alt="">
-              <p class="game-description">Embark on an underwater odyssey with </p>
-              <p class="cabriela-text">Cabriela</p>
-              <p class="sub-description">Where thrilling challenges and
-                captivating discoveries await!</p>
-            </div>
+  <section class="home">
+    <img class="background" src="assets/images/underwater-background.svg" alt="">
+    <div class="content-slide">
+    </div>
+    <div class="content-slide">
+    </div>
+    <div class="content-slide"></div>
+    <div class="content-slide"></div>
+    <div class="content-slide"></div>
+    <div class="content-slide"></div>
+    <div class="content active">
+      <div class="welcome-container">
+        <div class="welcome-row">
+          <div class="left-container">
+            <h1>Aqua<br><span>Goat</span></h1>
           </div>
-          <div class="game-summary">
-            <p class="elevator-pitch">Are you ready to dive into an exciting and magical adventure in the depths of the
-              sea?
-            </p>
-            <p class="elevator-pitch">Join our hybrid heroine, the goat-mermaid, and discover an underwater world full
-              of dangers and
-              wonders!
-            </p>
+          <div class="right-container">
+            <img class="cabriela-img" src="assets/icons/cabriella-shell2.png" alt="">
           </div>
-          <div class="enemies">
-            <div class="beware-sign">
-              <p class="beware">Beware!</p>
-            </div>
-            <div class="inf-container">
-              <div class="enemy-description">
-                <div class="enemy-container">
-                  <div class="enemy1">
-                    <img src="/assets/images/shark-square.png" alt="shark">
-                  </div>
-                  <div class="enemy2">
-                    <img src="/assets/images/jellyfish-square.png" alt="jellyfish">
-
-                  </div>
-                  <div class="enemy3">
-                    <img src="/assets/images/octopus-square.png" alt="octopus">
-                  </div>
-                </div>
-              </div>
-
-              <div class="enemy-text">
-                <div class="enemy-text1">
-                  Keep safe from the fierce sharks lurking in the depths! You must dodge their sharp fins and teeth
-                  as you
-                  glide towards your destination. </div>
-                <div class="enemy-text2">
-                  Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to
-                  keep
-                  progressing towards the ocean floor.
-                </div>
-                <div class="enemy-text3">
-                  Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils
-                  to
-                  ensure a safe journey through the underwater realm.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="how-to-play">
-            <div class="how-to-play-header">
-              <p class="how-to-play-text">
-                How to play
-              </p>
-              <div class="how-to-play-content">
-                <div class="how-to-play-animation">
-
-                </div>
-                <div class="how-to-play-content-text">
-                  <p>
-                    Navigate the Goat-Mermaid using the left and right arrow keys to evade enemies. Colliding with an
-                    enemy results in game over. Test your survival skills and aim to endure for as long as possible.
-                    Best
-                    of luck in this challenging adventure!
-                  </p>
-                </div>
-              </div>
-              <nav class="navigation">
-                <button id="PlayNow" onclick="location.href='https://aquagout.github.io/AquaGout-Game/'"
-                  class=" btn-login">Play
-                  now!</button>
-              </nav>
-            </div>
-          </div>
-
+        </div>
+        <div class="description-container">
+          <p>Embark on an underwater odyssey with </p>
+          <p class="cabriela-text">Cabriela</p>
+          <p class="sub-description">Where thrilling challenges and
+            captivating discoveries await!</p>
         </div>
       </div>
-
-      <div class="layer3">
-        <section class="container">
-
-        </section>
-      </div>
     </div>
+    <div class="content">
+      <h1 class="beware-text">Beware!</h1>
+      <div class="enemy-container">
+        <div class="left-column">
+          <div class="enemy1">
+            <img src="/assets/images/shark-square.png" alt="shark">
+          </div>
+          <div class="enemy2">
+            <img src="/assets/images/jellyfish-square.png" alt="jellyfish">
 
-    </div>
-    </div>
-    </div>
-    <div class="bottom-decoration"></div>
-  </main>
-
-  <!-- FOOTER -->
-  <!-- FOOTER -->
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <div class="follow-us">
-        <p>Follow us on: </p>
-      </div>
-      <div class="social-media">
-        <div class="icons">
-          <a href="#fb"><i class="fab fa-facebook-f"></i></a>
-          <a href="#twitter"><i class="fab fa-twitter"></i></a>
-          <a href="#ig"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="enemy3">
+            <img src="/assets/images/octopus-square.png" alt="octopus">
+          </div>
         </div>
       </div>
+      <div class="right-column">
 
-  </footer>
-  <div class="copyright">
-    <p> &#169; Copyright AquaGoat 2023 - All rights reserved.</p>
-  </div>
-  </div>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-  $(".slick-carousel").slick({
-    infinite: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: true,
-    autoplay: false,
-  });
-});
+        <div class="enemy-text">
+          <div class="enemy-text1">
+            Keep safe from the fierce sharks lurking in the depths! You must dodge their sharp fins and teeth
+            as you
+            glide towards your destination. </div>
+          <div class="enemy-text2">
+            Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to
+            keep
+            progressing towards the ocean floor.
+          </div>
+          <div class="enemy-text3">
+            Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils
+            to
+            ensure a safe journey through the underwater realm.
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="content">
+      <h1>Aqua<br><span>Goat</span></h1>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+        maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
+    </div>
+    <div class="content">
+      <h1>Aqua<br><span>Goat</span></h1>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+        maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
+    </div>
+    <div class="content">
+      <h1>Aqua<br><span>Goat</span></h1>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+        maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
+    </div>
+    <div class="content">
+      <h1>Aqua<br><span>Goat</span></h1>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+        maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
+    </div>
+    <div class="content">
+      <h1>Aqua<br><span>Goat</span></h1>
+      <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+        maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
+    </div>
+    <div class="media-icons">
+      <a href="f#"> <i class="fab fa-facebook-f"></i></a>
+      <a href="f#"> <i class="fab fa-instagram"></i></a>
+      <a href="f#"> <i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="slider-navigation">
+      <div class="nav-btn active"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+    </div>
+  </section>
+
+
+
+
+
+
+  <script>
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".content-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function (manual) {
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    };
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      const sharkSquare = document.querySelector(".enemy1 img");
+      const octopusSquare = document.querySelector(".enemy3 img");
+      const jellyfishSquare = document.querySelector(".enemy2 img");
+
+      const enemyText1 = document.querySelector(".enemy-text1");
+      const enemyText2 = document.querySelector(".enemy-text2");
+      const enemyText3 = document.querySelector(".enemy-text3");
+
+      sharkSquare.addEventListener("click", () => {
+        showDescription(enemyText1);
+      });
+
+      octopusSquare.addEventListener("click", () => {
+        showDescription(enemyText2);
+      });
+
+      jellyfishSquare.addEventListener("click", () => {
+        showDescription(enemyText3);
+      });
+
+
+      function showDescription(description) {
+        if (window.innerWidth > 820) return
+
+        let overlay = document.querySelector(".overlay")
+        let enemies = [enemyText1, enemyText2, enemyText3]
+        for (let enemy of enemies) {
+          enemy.innerHTML = ""
+        }
+
+
+        overlay = document.createElement("div");
+        overlay.classList.add("overlay");
+
+        const descriptionContainer = document.createElement("div");
+        descriptionContainer.classList.add("description-container");
+
+        descriptionContainer.appendChild(description.cloneNode(true));
+        let descriptions = {
+          "enemy-text1": "Keep safe from the fierce sharks lurking in the depths! You must dodge their sharp fins and teeth as you glide towards your destination",
+          "enemy-text2": "Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to keep progressing towards the ocean floor",
+          "enemy-text3": "Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils to ensure a safe journey through the underwater realm"
+        }
+        description.innerHTML = descriptions[description.classList[0]]
+        description.style.display = "block";
+        overlay.appendChild(descriptionContainer);
+        document.body.appendChild(overlay);
+      }
+    });
   </script>
 
 
 </body>
 
-</html>g
+</html>
