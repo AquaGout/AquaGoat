@@ -146,6 +146,7 @@ section {
   max-height: 100vh;
   width: auto;
   object-fit: contain;
+  margin-bottom: 200px !important;
 }
 
 .content-slide {
@@ -457,11 +458,16 @@ section {
 
   }
 
+  .info-text {
+    margin-top: 30px;
+  }
+
   .how-to-play-container {
     display: flex;
     flex-direction: column;
     text-align: center;
     font-size: 20px;
+    margin-bottom: 300px !important;
   }
 
   .how-to-play-title h1 {
@@ -473,6 +479,10 @@ section {
     background-color: red;
     width: 450px;
     height: 250px;
+  }
+
+  #PlayNow {
+    margin-top: 30px;
   }
 }
 
@@ -556,6 +566,7 @@ section {
   }
 
   section {
+    overflow: hidden !important;
   }
 
   header .navigation {
@@ -620,8 +631,8 @@ section {
   }
 
   .slider-navigation .nav-btn {
-    width: 12px;
-    height: 12px;
+    width: 22px;
+    height: 22px;
     background: #fff;
     border-radius: 50%;
     cursor: pointer;
@@ -644,15 +655,14 @@ section {
     justify-content: center;
     bottom: 2px;
     position: sticky;
-    
   }
-  
+
   .media-icons {
-    margin-top: 2px;
+    margin-top: -60px;
     color: #fff;
-    font-size: 15px;
-    letter-spacing: 30px;
-    left: 46px;
+    font-size: 35px;
+    letter-spacing: 50px;
+    margin-left: 46px;
   }
 
   .home .media-icons a:not(:last-child) {
@@ -708,34 +718,128 @@ section {
 
   }
 
+  .brand {
+    padding-left: 780px;
+  }
+
   .info-text {
-    margin-top: 350px;
+    margin-top: 50px;
+    text-align: center;
+    overflow: hidden !important;
   }
 
   .home .content p {
     margin-bottom: 0;
     text-align: center;
     font-size: 30px;
-    
+    overflow: hidden !important;
   }
 
   .main-text {
     font-size: 30px !important;
-    
+    overflow: hidden !important;
   }
 
   .home .background img {
     background-size: contain;
     margin-top: 900px;
+    overflow: hidden !important;
   }
 
   .how-to-play-container {
     display: flex;
     flex-direction: column;
     text-align: center;
+    overflow: hidden !important;
   }
 
-  .info-text{
-    margin-top: 200px !important;
+  .how-to-play-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    overflow: hidden !important;
+  }
+
+  .how-to-play-title h1 {
+    margin-top: 0 !important;
+    line-height: 90px !important;
+    overflow: hidden !important;
+  }
+
+  .how-to-play-video {
+    background-color: red;
+    width: 750px;
+    height: 450px;
+    margin-left: 170px;
+    overflow: hidden !important;
+  }
+
+  #PlayNow {
+    margin-top: 30px;
+  }
+
+  .about-us-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-us-pics {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  .about-us-names {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 170px;
+    margin-right: 80px;
+  }
+
+  .nahomi,
+  .sara,
+  .raul,
+  .naomi {
+    background-color: red !important;
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+  }
+
+  .text1,
+  .text2,
+  .text3,
+  .text4 {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: -20px;
+    width: 40px;
+    padding: 0 75px 0px 50px;
+    margin-right: 180px;
+    text-align: center;
+  }
+
+  .sara-text{
+    margin-left:12px;
+  }
+
+  .about-us-description {
+    text-align: center;
+    margin-top: 50px;
   }
 }
