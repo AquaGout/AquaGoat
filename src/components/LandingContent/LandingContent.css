@@ -213,6 +213,12 @@ section {
   width: 200px;
 }
 
+.how-to-play-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 @media (width <= 760px) {
   header {
     display: flex;
@@ -297,6 +303,10 @@ section {
   }
 
   section {
+  }
+
+  .brand {
+    margin-left: 50px;
   }
 
   header .navigation {
@@ -445,6 +455,24 @@ section {
 
   .beware-text {
 
+  }
+
+  .how-to-play-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .how-to-play-title h1 {
+    margin-top: 80px !important;
+    line-height: 90px !important;
+  }
+
+  .how-to-play-video {
+    background-color: red;
+    width: 450px;
+    height: 250px;
   }
 }
 
@@ -616,8 +644,9 @@ section {
     justify-content: center;
     bottom: 2px;
     position: sticky;
+    
   }
-
+  
   .media-icons {
     margin-top: 2px;
     color: #fff;
@@ -687,14 +716,26 @@ section {
     margin-bottom: 0;
     text-align: center;
     font-size: 30px;
+    
   }
 
   .main-text {
     font-size: 30px !important;
+    
   }
 
   .home .background img {
     background-size: contain;
     margin-top: 900px;
+  }
+
+  .how-to-play-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-text{
+    margin-top: 200px !important;
   }
 }

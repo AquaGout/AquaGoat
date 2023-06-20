@@ -53,8 +53,8 @@
         <div class="description-container">
           <p class="main-text">Embark on an underwater odyssey with Cabriela. Where thrilling challenges and
             captivating discoveries await!</p>
-        
-        </div>
+          </div>
+          <button id="PlayNow"> Play now!</button>
         <!-- <div class="description-container">
           <p class="main-text">Embark on an underwater odyssey with </p>
           <p class="cabriela-text">Cabriela</p>
@@ -87,38 +87,55 @@
             as you
             glide towards your destination. </div>
           <div class="enemy-text2">
-            
+
           </div>
           <div class="enemy-text3">
-            
+
           </div>
         </div>
       </div>
     </div>
 
     <div class="content ">
+
+      <div class="how-to-play-container">
+        <div class="how-to-play-title">
+          <h1>How to<br><span>Play</span></h1>
+        </div>
+        <div class="how-to-play-video">
+
+        </div>
+        <p class="info-text">
+          Navigate the Goat-Mermaid using the left and right arrow keys to evade enemies. Colliding with an
+          enemy results in game over. Test your survival skills and aim to endure for as long as possible.
+          Best
+          of luck in this challenging adventure!
+        </p>
+        <button id="PlayNow"> Play now!</button>
+      </div>
+    </div>
+    <div class="content">
       <!-- <h1>Aqua<br><span>Goat</span></h1> -->
-      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem
+        alias, id delectus
         maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
     </div>
     <div class="content">
       <!-- <h1>Aqua<br><span>Goat</span></h1> -->
-      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem
+        alias, id delectus
         maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
     </div>
     <div class="content">
       <!-- <h1>Aqua<br><span>Goat</span></h1> -->
-      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem
+        alias, id delectus
         maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
     </div>
     <div class="content">
       <!-- <h1>Aqua<br><span>Goat</span></h1> -->
-      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
-        maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
-    </div>
-    <div class="content">
-      <!-- <h1>Aqua<br><span>Goat</span></h1> -->
-      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem alias, id delectus
+      <p class="info-text"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, nam ea saepe dolor autem
+        alias, id delectus
         maxime voluptatem, esse ab aut vel facilis cumque recusandae numquam? Illo, provident culpa!</p>
     </div>
     <div class="media-icons">
@@ -136,94 +153,111 @@
   </section>
 
 
+  <div class="how-to-play">
+    <div class="how-to-play-header">
+      <p class="how-to-play-text">
+        How to play
+      </p>
+      <div class="how-to-play-content">
+        <div class="how-to-play-animation">
+
+        </div>
+        <div class="how-to-play-content-text">
+          <p>
+            Navigate the Goat-Mermaid using the left and right arrow keys to evade enemies. Colliding with an
+            enemy results in game over. Test your survival skills and aim to endure for as long as possible.
+            Best
+            of luck in this challenging adventure!
+          </p>
+        </div>
+      </div>
 
 
 
+      <script>
+        const menuBtn = document.querySelector(".menu-btn");
+        const navigation = document.querySelector(".navigation");
 
-  <script>
-    const menuBtn = document.querySelector(".menu-btn");
-    const navigation = document.querySelector(".navigation");
+        menuBtn.addEventListener("click", () => {
+          menuBtn.classList.toggle("active");
+          navigation.classList.toggle("active");
+        });
 
-    menuBtn.addEventListener("click", () => {
-      menuBtn.classList.toggle("active");
-      navigation.classList.toggle("active");
-    });
+        const btns = document.querySelectorAll(".nav-btn");
+        const slides = document.querySelectorAll(".content-slide");
+        const contents = document.querySelectorAll(".content");
 
-    const btns = document.querySelectorAll(".nav-btn");
-    const slides = document.querySelectorAll(".content-slide");
-    const contents = document.querySelectorAll(".content");
+        var sliderNav = function (manual) {
+          btns.forEach((btn) => {
+            btn.classList.remove("active");
+          });
+          slides.forEach((slide) => {
+            slide.classList.remove("active");
+          });
+          contents.forEach((content) => {
+            content.classList.remove("active");
+          });
+          btns[manual].classList.add("active");
+          slides[manual].classList.add("active");
+          contents[manual].classList.add("active");
+        };
 
-    var sliderNav = function (manual) {
-      btns.forEach((btn) => {
-        btn.classList.remove("active");
-      });
-      slides.forEach((slide) => {
-        slide.classList.remove("active");
-      });
-      contents.forEach((content) => {
-        content.classList.remove("active");
-      });
-      btns[manual].classList.add("active");
-      slides[manual].classList.add("active");
-      contents[manual].classList.add("active");
-    };
+        btns.forEach((btn, i) => {
+          btn.addEventListener("click", () => {
+            sliderNav(i);
+          });
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+          const sharkSquare = document.querySelector(".enemy1 img");
+          const octopusSquare = document.querySelector(".enemy3 img");
+          const jellyfishSquare = document.querySelector(".enemy2 img");
 
-    btns.forEach((btn, i) => {
-      btn.addEventListener("click", () => {
-        sliderNav(i);
-      });
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      const sharkSquare = document.querySelector(".enemy1 img");
-      const octopusSquare = document.querySelector(".enemy3 img");
-      const jellyfishSquare = document.querySelector(".enemy2 img");
+          const enemyText1 = document.querySelector(".enemy-text1");
+          const enemyText2 = document.querySelector(".enemy-text2");
+          const enemyText3 = document.querySelector(".enemy-text3");
 
-      const enemyText1 = document.querySelector(".enemy-text1");
-      const enemyText2 = document.querySelector(".enemy-text2");
-      const enemyText3 = document.querySelector(".enemy-text3");
+          sharkSquare.addEventListener("click", () => {
+            showDescription(enemyText1);
+          });
 
-      sharkSquare.addEventListener("click", () => {
-        showDescription(enemyText1);
-      });
+          octopusSquare.addEventListener("click", () => {
+            showDescription(enemyText2);
+          });
 
-      octopusSquare.addEventListener("click", () => {
-        showDescription(enemyText2);
-      });
-
-      jellyfishSquare.addEventListener("click", () => {
-        showDescription(enemyText3);
-      });
-
-
-      function showDescription(description) {
-        if (window.innerWidth > 820) return
-
-        let overlay = document.querySelector(".overlay")
-        let enemies = [enemyText1, enemyText2, enemyText3]
-        for (let enemy of enemies) {
-          enemy.innerHTML = ""
-        }
+          jellyfishSquare.addEventListener("click", () => {
+            showDescription(enemyText3);
+          });
 
 
-        overlay = document.createElement("div");
-        overlay.classList.add("overlay");
+          function showDescription(description) {
+            if (window.innerWidth > 820) return
 
-        const descriptionContainer = document.createElement("div");
-        descriptionContainer.classList.add("description-container");
+            let overlay = document.querySelector(".overlay")
+            let enemies = [enemyText1, enemyText2, enemyText3]
+            for (let enemy of enemies) {
+              enemy.innerHTML = ""
+            }
 
-        descriptionContainer.appendChild(description.cloneNode(true));
-        let descriptions = {
-          "enemy-text1": "Keep safe from the fierce sharks lurking in the depths! You must dodge their sharp fins and teeth as you glide towards your destination",
-          "enemy-text2": "Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to keep progressing towards the ocean floor",
-          "enemy-text3": "Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils to ensure a safe journey through the underwater realm"
-        }
-        description.innerHTML = descriptions[description.classList[0]]
-        description.style.display = "block";
-        overlay.appendChild(descriptionContainer);
-        document.body.appendChild(overlay);
-      }
-    });
-  </script>
+
+            overlay = document.createElement("div");
+            overlay.classList.add("overlay");
+
+            const descriptionContainer = document.createElement("div");
+            descriptionContainer.classList.add("description-container");
+
+            descriptionContainer.appendChild(description.cloneNode(true));
+            let descriptions = {
+              "enemy-text1": "Keep safe from the fierce sharks lurking in the depths! You must dodge their sharp fins and teeth as you glide towards your destination",
+              "enemy-text2": "Majestic manta rays will also cross your path. Stay calm and avoid their graceful movements to keep progressing towards the ocean floor",
+              "enemy-text3": "Beware of the floating jellyfish with their long tentacles. Steer clear of their stinging tendrils to ensure a safe journey through the underwater realm"
+            }
+            description.innerHTML = descriptions[description.classList[0]]
+            description.style.display = "block";
+            overlay.appendChild(descriptionContainer);
+            document.body.appendChild(overlay);
+          }
+        });
+      </script>
 
 
 </body>
