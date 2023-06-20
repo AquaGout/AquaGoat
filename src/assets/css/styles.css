@@ -13,7 +13,7 @@
 }
 
 /* Se insertan clases o CSS global */
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,6 +26,707 @@ html {
   color: white;
 }
 
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px 200px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #4ca4f7, #005cb1);
+  overflow: hidden;
+}
+
+.home::before {
+  z-index: 777;
+  content: "";
+  position: absolute;
+  background: rgb(3 96 251 30%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content {
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 0;
+  display: none;
+}
+
+.home .content.active {
+  display: block;
+}
+
+.home .content h1 {
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 130px;
+  margin-bottom: 20px;
+}
+
+.home .content h1 span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.home .content p {
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.info-text {
+  margin-top: 300px;
+}
+
+.home .media-icons {
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  padding: 400px 0 0;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.home .media-icons a {
+  color: #fff;
+  font-size: 1.6em;
+  transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.home .media-icons a:hover {
+  transform: scale(1.3);
+}
+
+.home .background {
+  z-index: 000;
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation {
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn {
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgb(255 255 255 / 50%);
+  transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active {
+  margin-top: 200px;
+  background: #4ca4f7;
+}
+
+.slider-navigation .nav-btn:not(:last-child) {
+  margin-top: 200px;
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:last-child {
+  margin-top: 200px;
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover {
+  transform: scale(1.2);
+}
+
+.slider-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-height: 100vh;
+  width: auto;
+  object-fit: contain;
+}
+
+.content-slide {
+  position: relative;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.content-slide.active {
+  clip-path: circle(150% at 0 50%);
+  transition: 2s ease;
+  transition-property: clip-path;
+}
+
+.content,
+.active img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.welcome-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container {
+  padding-right: 40px;
+}
+
+.right-container {
+  padding-right: 40px;
+}
+
+.enemy-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.enemy-container img {
+  height: 200px;
+  width: 200px;
+}
+
+@media (width <= 760px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 110px;
+  }
+
+  /* header {
+    display:flex;
+    padding: 20px 80px;
+    height: 10px;
+    width: 10px;
+
+  } */
+
+  .menu-btn {
+    background-color: rgb(255 255 255);
+    margin-left: 250px;
+    margin-top: 60px;
+    width: 100px;
+  }
+
+  header .brand {
+    font-size: larger;
+    margin-top: 60px;
+  }
+
+  .beware-text {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 80px;
+    overflow: hidden;
+    font-size: 35px !important;
+    text-align: center;
+    margin-top: 110px;
+  }
+
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .welcome-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description-container {
+    width: 250px;
+    font-size: 20px;
+    margin-top: 50px;
+  }
+
+  .cabriela-text {
+    padding: 5px;
+    font-size: 25px;
+  }
+
+  .left-container {
+    display: none;
+  }
+
+  .sub-description {
+    font-size: 13px;
+  }
+
+  .right-container img {
+    width: 7rem;
+    height: 7rem;
+    margin-left: 40px;
+    margin-top: 180px;
+  }
+
+  .home .media-icons {
+    right: 15px;
+  }
+
+  section {
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  header .navigation.active {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(1 1 1 / 50%);
+  }
+
+  header .navigation.active .navigation-items a {
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items a::before {
+    background: #222;
+    height: 5px;
+  }
+
+  header .navigation .navigation-items {
+    background: #fff;
+    width: 400px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+
+  .menu-btn {
+    background-image: url("/src/assets/icons/favicon-16x16.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active {
+    z-index: 999;
+    background: url("/src/assets/icons/favicon-16x16.png") no-repeat;
+    background-size: 25px;
+    background-position: center;
+  }
+
+  .html {
+    font-size: 2px;
+  }
+
+  .slider-navigation .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0;
+  }
+
+  .slider-navigation .nav-btn:not(:last-child) {
+    margin-top: -500px;
+    margin-right: 20px;
+  }
+
+  .slider-navigation .nav-btn:last-child {
+    margin-right: 0;
+    margin-top: -500px;
+  }
+
+  .home .media-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    bottom: 2px;
+    position: sticky;
+  }
+
+  .media-icons {
+    margin-top: 2px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 30px;
+    left: 46px;
+  }
+
+  .home .media-icons a:not(:last-child) {
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .enemy1 img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .enemy2 img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .enemy3 img {
+    height: 100px;
+    width: 100px;
+  }
+
+  .enemy-text {
+    text-align: center;
+  }
+
+  .enemy-text1 {
+    font-size: 20px;
+    margin-top: 100px;
+  }
+
+  .enemy-text2 {
+    font-size: 20px;
+  }
+
+  .enemy-text3 {
+    font-size: 20px;
+  }
+
+  .beware-text {
+
+  }
+}
+
+@media (width >= 765px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 110px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .menu-btn {
+    background-color: rgb(255 255 255);
+    margin-left: 250px;
+    margin-top: 60px;
+    width: 100px;
+    overflow: hidden;
+  }
+
+  header .brand {
+    font-size: 2rem;
+    margin-top: 200px;
+    margin-left: 400px;
+  }
+
+  .beware-text {
+    font-size: 60px !important;
+    text-align: center;
+    margin-top: 200px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 80px;
+  }
+
+  .welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+
+  .welcome-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .description-container p {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    font-size: 10px;
+  }
+
+  /* .cabriela-text {
+    padding: 5px;
+    font-size: 25px;
+  } */
+
+  .left-container {
+    display: none;
+  }
+
+  .sub-description {
+    font-size: 13px;
+  }
+
+  .right-container img {
+    width: 10rem;
+    height: 10rem;
+    margin-left: 40px;
+    margin-top: 200px;
+  }
+
+  .home .media-icons {
+    right: 15px;
+  }
+
+  section {
+  }
+
+  header .navigation {
+    display: none;
+  }
+
+  header .navigation.active {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(1 1 1 / 50%);
+  }
+
+  header .navigation.active .navigation-items a {
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items a::before {
+    background: #222;
+    height: 5px;
+  }
+
+  header .navigation .navigation-items {
+    background: #fff;
+    width: 400px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+
+  .menu-btn {
+    background-image: url("/src/assets/icons/favicon-16x16.png") no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active {
+    z-index: 999;
+    background: url("/src/assets/icons/favicon-16x16.png") no-repeat;
+    background-size: 25px;
+    background-position: center;
+  }
+
+  .html {
+    font-size: 2px;
+  }
+
+  .slider-navigation .nav-btn {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0;
+  }
+
+  .slider-navigation .nav-btn:not(:last-child) {
+    margin-top: -500px;
+    margin-right: 20px;
+  }
+
+  .slider-navigation .nav-btn:last-child {
+    margin-right: 0;
+    margin-top: -500px;
+  }
+
+  .home .media-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    bottom: 2px;
+    position: sticky;
+  }
+
+  .media-icons {
+    margin-top: 2px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 30px;
+    left: 46px;
+  }
+
+  .home .media-icons a:not(:last-child) {
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+  }
+
+  .enemy1 img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .enemy2 img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .enemy3 img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .enemy-text {
+    text-align: center;
+  }
+
+  .enemy-text1 {
+    font-size: 30px;
+    margin-top: 30px;
+  }
+
+  /* .enemy-text2{
+    font-size: 30px;
+  }
+  .enemy-text3{
+    font-size: 30px;
+  } */
+
+  .beware-text {
+
+  }
+
+  .info-text {
+    margin-top: 350px;
+  }
+
+  .home .content p {
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .main-text {
+    font-size: 30px !important;
+  }
+
+  .home .background img {
+    background-size: contain;
+    margin-top: 900px;
+  }
+}
+
 /* body {
     background: linear-gradient(to bottom, #80c0d6, #180869);
     height: 100vh;
@@ -33,4 +734,5 @@ html {
  */
 
 /* stylelint-disable indentation */
+
 /* Style the button that is used to open and close the collapsible content */
