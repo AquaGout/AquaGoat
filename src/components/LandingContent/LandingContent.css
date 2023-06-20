@@ -525,41 +525,39 @@ section {
     justify-content: center;
     align-items: center;
     height: auto;
+    margin-top: 160px;
   }
 
   .welcome-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-
+  
   .description-container p {
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
-    font-size: 10px;
+    font-size: 35px !important;
+    width: 700px;
+    text-align: left !important;
   }
-
-  /* .cabriela-text {
+  
+  
+  .cabriela-text {
     padding: 5px;
-    font-size: 25px;
-  } */
-
-  .left-container {
-    display: none;
+    font-size: 10px !important;
+  }
+  
+  .left-container h1 {
+    
+    padding-top: 20px;
   }
 
   .sub-description {
     font-size: 13px;
   }
 
-  .right-container img {
-    width: 10rem;
-    height: 10rem;
-    margin-left: 40px;
-    margin-top: 200px;
-  }
 
   .home .media-icons {
     right: 15px;
@@ -668,11 +666,38 @@ section {
   .home .media-icons a:not(:last-child) {
   }
 
-  .left-column {
+  .left-container {
+    font-size: 50px;
+    margin-top: 50px;
+    text-align: left;
+  }
+
+  .right-container {
+    width: 700px;
+    height: 700px;
+  }
+
+  .cabriela-img {
+    width: 700px !important;
+    height: 700px !important;
+    margin-right: 30px !important;
+  }
+
+  .enemy-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top: -100px !important;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    gap: 20px;
   }
 
   .right-column {
@@ -680,31 +705,37 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 10px;
+    margin-bottom: 70px;
   }
 
   .enemy1 img {
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
   }
 
   .enemy2 img {
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
   }
 
   .enemy3 img {
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
   }
 
   .enemy-text {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 30px;
+    width: 1100px;
+    margin-bottom: 90px;
   }
 
-  .enemy-text1 {
-    font-size: 30px;
-    margin-top: 30px;
+  .enemy-text1,
+  .enemy-text2,
+  .enemy-text3 {
+    margin-top: 150px;
   }
 
   /* .enemy-text2{
@@ -715,7 +746,8 @@ section {
   } */
 
   .beware-text {
-
+    font-size: 85px !important;
+    margin-top: -20px !important;
   }
 
   .brand {
@@ -778,6 +810,26 @@ section {
 
   #PlayNow {
     margin-top: 30px;
+    margin-left: 380px;
+    background-color: rgb(172 133 255);
+    color: #380984 !important;
+    width: 300px;
+    height: 100px;
+    border: 2px;
+    outline: none;
+    border-radius: 47px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 35px;
+  }
+
+  #PlayNow:hover {
+    background: rgb(149, 106, 236); /* Cambia el color de fondo que desees /
+    color: white; / Cambia el color de texto que desees */
+  }
+
+  {
+
   }
 
   .about-us-container {
@@ -814,10 +866,19 @@ section {
   .sara,
   .raul,
   .naomi {
-    background-color: red !important;
     height: 200px;
     width: 200px;
     margin: 50px;
+  }
+
+  .sara {
+    background-image: url("/assets/images/sara.png");
+    border-radius: 50%;
+  }
+
+  .nahomi {
+    background-image: url("/assets/images/nahomi.jpeg");
+    border-radius: 50%;
   }
 
   .text1,
@@ -829,17 +890,24 @@ section {
     justify-content: start;
     margin-top: -20px;
     width: 40px;
-    padding: 0 75px 0px 50px;
+    padding: 0 75px 0 50px;
     margin-right: 180px;
     text-align: center;
   }
 
-  .sara-text{
-    margin-left:12px;
+  .sara-text {
+    margin-left: 12px;
   }
 
   .about-us-description {
     text-align: center;
     margin-top: 50px;
+  }
+
+  .faqs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
