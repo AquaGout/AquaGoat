@@ -104,6 +104,8 @@ section {
 .brand {
   color: #e5eefd;
   text-shadow: 4px 3px 10px #377fe5;
+  position: absolute;
+  right: 0;
 }
 
 .slider-navigation {
@@ -235,20 +237,18 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 110px;
   }
 
   .menu-btn {
-    background-color: rgb(255 255 255);
-    margin-left: 250px;
-    margin-top: 60px;
-    width: 100px;
+    display: none;
+    overflow: hidden;
   }
 
   header .brand {
     font-size: 40px !important;
-    margin-top: 60px;
-    right: 5em !important;
+    margin-top: 80px !important;
+    position: absolute;
+    margin-right: 38% !important;
   }
 
   .beware-text {
@@ -267,6 +267,9 @@ section {
     justify-content: center;
     align-items: center;
     height: auto;
+    width: fit-content;
+    overflow: hidden;
+    margin-left: -1.5em !important;
   }
 
   .welcome-row {
@@ -277,41 +280,31 @@ section {
   }
 
   .description-container {
-    width: 250px;
+    width: 600px;
     font-size: 20px;
-    margin-top: 50px;
-  }
-
-  .cabriela-text {
-    padding: 5px;
-    font-size: 25px;
+    padding-left: 4em;
+    margin-top: 20px;
   }
 
   .left-container {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
   }
 
-  .sub-description {
-    font-size: 13px;
-  }
-
-  .right-container img {
-    width: 7rem;
-    height: 7rem;
-    margin-left: 40px;
-    margin-top: 180px;
+  .left-container h1 {
+    text-align: center !important;
+    padding-left: 0.5em;
   }
 
   .home .media-icons {
-    right: 15px;
+    font-size: 30px;
+    padding-left: 3%;
   }
 
   section {
   }
 
-  .brand {
-    margin-left: 50px;
-  }
 
   header .navigation {
     display: none;
@@ -353,21 +346,13 @@ section {
     box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
   }
 
+
   .menu-btn {
-    background-image: url("/src/assets/icons/favicon-16x16.png") no-repeat;
-    background-size: 30px;
-    background-position: center;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: 0.3s ease;
+    overflow: hidden;
   }
 
   .menu-btn.active {
-    z-index: 999;
-    background: url("/src/assets/icons/favicon-16x16.png") no-repeat;
-    background-size: 25px;
-    background-position: center;
+    overflow: hidden;
   }
 
   .html {
@@ -412,20 +397,9 @@ section {
   .home .media-icons a:not(:last-child) {
   }
 
-  .left-container {
-    font-size: 20px;
-    margin-top: 50px;
-    text-align: left;
-  }
-
-  .right-container {
-    width: 700px;
-    height: 700px;
-  }
-
   .cabriela-img {
-    width: 200px !important;
-    height: 200px !important;
+    width: 500px !important;
+    height: 500px !important;
   }
 
   .enemy-container {
@@ -576,7 +550,7 @@ section {
 
   #PlayNow {
     margin-top: 30px;
-    margin-left: 380px;
+    margin-left: 32%;
     background-color: rgb(172 133 255);
     color: #380984 !important;
     width: 300px;
@@ -680,7 +654,10 @@ section {
   }
 }
 
-@media (height >= 500px) {
+@media only screen
+  and (device-width: 414px)
+  and (device-height: 736px)
+{
   header {
     display: flex;
     justify-content: center;
@@ -691,11 +668,7 @@ section {
   }
 
   .menu-btn {
-    background-color: rgb(255 255 255);
-    margin-left: 250px;
-    margin-top: 60px;
-    width: 100px;
-    overflow: hidden;
+    display: none;
   }
 
   header .brand {
@@ -740,14 +713,10 @@ section {
     text-shadow: 4px 3px 10px #21467a;
   }
 
-  .cabriela-text {
-    padding: 5px;
-    font-size: 10px !important;
-  }
-
   .left-container h1 {
     padding-top: 20px;
     color: #c7bdf6;
+    font-size: 40px !important;
     text-shadow: 6px 1px 16px #9b71ea;
   }
 
@@ -805,10 +774,6 @@ section {
     box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
   }
 
-  .html {
-    font-size: 2px;
-  }
-
   .slider-navigation .nav-btn {
     width: 22px;
     height: 22px;
@@ -858,8 +823,6 @@ section {
     width: 700px;
     height: 700px;
   }
-
-
 
   .cabriela-img {
     width: 300px !important;
@@ -1335,8 +1298,8 @@ section {
   }
 
   .cabriela-img {
-    width: 700px !important;
     height: 700px !important;
+    width: 700px !important;
     margin-right: 30px !important;
   }
 
@@ -1348,7 +1311,7 @@ section {
     font-size: 40px;
     margin-top: -100px !important;
   }
-  
+
   .left-column {
     display: flex;
     flex-direction: column;
@@ -1412,7 +1375,7 @@ section {
   }
 
   .brand {
-    padding-left: 20.7em;
+    padding-left: 23.7em;
   }
 
   .info-text {
@@ -1590,4 +1553,13 @@ section {
     text-shadow: 4px 3px 10px #21467a;
     margin-top: 50px;
   }
+}
+
+@media only screen
+  and (device-width: 414px)
+  and (device-height: 736px)
+  and (device-pixel-ratio: 3){
+
+
+
 }
