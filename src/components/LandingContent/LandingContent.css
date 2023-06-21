@@ -8,6 +8,7 @@ section {
 .home {
   position: relative;
   width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -974,7 +975,6 @@ section {
     background-color: red;
     width: 750px;
     height: 450px;
-    margin-left: 26%;
     overflow: hidden !important;
   }
 
@@ -994,7 +994,7 @@ section {
   }
 
   #PlayNow2:hover {
-    background: rgb(149 106 236); /* Cambia el color de fondo que desees /
+    background: rgb(46 140 10); /* Cambia el color de fondo que desees /
     color: white; / Cambia el color de texto que desees */
   }
 
@@ -1402,7 +1402,7 @@ section {
   }
 
   #PlayNow2:hover {
-    background: rgb(149 106 236); /* Cambia el color de fondo que desees /
+    background: rgb(68 163 10)/* Cambia el color de fondo que desees /
     color: white; / Cambia el color de texto que desees */
   }
 
@@ -1859,13 +1859,14 @@ section {
     background-color: red;
     width: 750px;
     height: 450px;
-    margin-left: 26%;
+    position: sticky;
+    margin-left: 32%;
     overflow: hidden !important;
   }
 
   .how-to-play-container #PlayNow2 {
     margin-top: 30px;
-    margin-left: 40%;
+    margin-left: 600px;
     background-color: #66bc11;
     color: #154805 !important;
     width: 300px;
@@ -1878,11 +1879,7 @@ section {
     font-size: 35px;
   }
 
-  #PlayNow2:hover {
-    background: rgb(149 106 236); /* Cambia el color de fondo que desees /
-    color: white; / Cambia el color de texto que desees */
-  }
-
+ 
   #PlayNow {
     margin-top: 30px;
     margin-left: 380px;
