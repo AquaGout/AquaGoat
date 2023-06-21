@@ -632,7 +632,7 @@ section {
   }
 
   .nahomi {
-    background-image: url("/assets/images/nahomi.jpeg");
+    background-image: url("/AquaGoat/assets/images/nahomi.jpeg");
     border-radius: 50%;
     position: absolute;
     left: 60px;
@@ -640,7 +640,7 @@ section {
   }
 
   .sara {
-    background-image: url("/assets/images/sara.png");
+    background-image: url("/AquaGoat/assets/images/sara.png");
     border-radius: 50%;
     position: absolute;
     left: 230px;
@@ -648,14 +648,14 @@ section {
   }
 
   .raul {
-    background-image: url("/assets/images/raul.jpeg");
+    background-image: url("/AquaGoat/assets/images/raul.jpeg");
     border-radius: 50%;
     position: absolute;
     right: 320px;
   }
 
   .naomi {
-    background-image: url("/assets/images/naomi.jpg");
+    background-image: url("/AquaGoat/assets/images/naomi.jpg");
     border-radius: 50%;
     margin-left: 410px;
   }
@@ -1069,12 +1069,12 @@ section {
   }
 
   .sara {
-    background-image: url("/assets/images/sara.png");
+    background-image: url("/AquaGoat/assets/images/sara.png");
     border-radius: 50%;
   }
 
   .nahomi {
-    background-image: url("/assets/images/nahomi.jpeg");
+    background-image: url("/AquaGoat/assets/images/nahomi.jpeg");
     border-radius: 50%;
   }
 
@@ -1477,24 +1477,24 @@ section {
   }
 
   .sara {
-    background-image: url("/assets/images/sara.png");
+    background-image: url("/AquaGoat/assets/images/sara.png");
     border-radius: 50%;
   }
 
   .nahomi {
-    background-image: url("/assets/images/nahomi.jpeg");
+    background-image: url("/AquaGoat/assets/images/nahomi.jpeg");
     border-radius: 50%;
   }
 
   .raul {
-    background-image: url("/assets/images/raul.jpeg");
+    background-image: url("/AquaGoat/assets/images/raul.jpeg");
     border-radius: 50%;
     position: absolute;
     right: 320px;
   }
 
   .naomi {
-    background-image: url("/assets/images/naomi.jpg");
+    background-image: url("/AquaGoat/assets/images/naomi.jpg");
     border-radius: 50%;
     margin-left: 410px;
   }
@@ -1949,23 +1949,23 @@ section {
   }
 
   .sara {
-    background-image: url("/assets/images/sara.png");
+    background-image: url("/AquaGoat/assets/images/sara.png");
     border-radius: 50%;
   }
 
   .nahomi {
-    background-image: url("/assets/images/nahomi.jpeg");
+    background-image: url("/AquaGoat/assets/images/nahomi.jpeg");
     border-radius: 50%;
   }
 
   .raul {
-    background-image: url("/assets/images/raul.jpeg");
+    background-image: url("/AquaGoat/assets/images/raul.jpeg");
     border-radius: 50%;
     margin-right: -250px;
   }
 
   .naomi {
-    background-image: url("/assets/images/naomi.jpg");
+    background-image: url("/AquaGoat/assets/images/naomi.jpg");
     border-radius: 50%;
     margin-left: 340px;
   }
@@ -2000,7 +2000,7 @@ section {
   and (device-width >= 1365px)
   and (device-height >= 1024px) {
   .naomi {
-    background-image: url("/assets/images/naomi.jpg");
+    background-image: url("AquaGoat/assets/images/naomi.jpg");
     border-radius: 50%;
     margin-left: 38px !important;
   }

@@ -1,0 +1,27 @@
+/* Se importan todos los CSS de cada componente */
+@import url("../../components/Header/Header.css");
+@import url("../../components/Footer/Footer.css");
+@import url("../../components/LandingContent/LandingContent.css");
+@import url("../../components/HowtoPlay/HowtoPlay.css");
+@import url("../../components/PlayNow/PlayNow.css");
+
+/* Fuentes */
+@font-face {
+  src: url("../fonts/Bohemian_Soul.otf") format("truetype");
+  font-family: "Richard Samuels";
+  src: url("../fonts/Richard_Samuels.otf") format("truetype");
+}
+
+/* Se insertan clases o CSS global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Richard Samuels", sans-serif;
+}
+
+html {
+  font-family: "Richard Samuels", sans-serif;
+  font-size: 35px;
+  color: white;
+}
