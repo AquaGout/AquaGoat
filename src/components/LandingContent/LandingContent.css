@@ -8,6 +8,8 @@ section {
 .home {
   position: relative;
   display: flex;
+  width:100vw;
+  height: auto;
   justify-content: center;
   flex-direction: column;
   background: linear-gradient(to bottom, #4ca4f7, #005cb1);
