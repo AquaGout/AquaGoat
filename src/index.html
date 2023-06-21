@@ -42,12 +42,14 @@
       <div class="welcome-container">
         <div class="welcome-row">
           <div class="left-container">
-            <h1>Aqua</h1><h1 class="goat-text">Goat</h1>
+            <h1>Aqua</h1>
+            <h1 class="goat-text">Goat</h1>
             <div class="description-container">
               <p class="main-text">Embark on an underwater odyssey with Cabriela. Where thrilling challenges and
                 captivating discoveries await!</p>
             </div>
-            <button id="PlayNow" onclick="location.href= 'https://aquagout.github.io/AquaGout-Game/'"> Play now!</button>
+            <button id="PlayNow" onclick="location.href= 'https://aquagout.github.io/AquaGout-Game/'"> Play
+              now!</button>
           </div>
           <div class=" right-container">
             <img class="cabriela-img" src="assets/icons/cabriella-shell2.png" alt="">
@@ -131,8 +133,8 @@
         <div class="about-us-names">
           <div class="text1">Nahomi Conde</div>
           <div class="text2"><span class="sara-text">Sara Parra</span></div>
-          <div class="text3"><span class ="raul-text">Raúl Sendín</span></div>
-          <div class="text4"><span class ="naomi-text">Naomi Elvira</span></div>
+          <div class="text3"><span class="raul-text">Raúl Sendín</span></div>
+          <div class="text4"><span class="naomi-text">Naomi Elvira</span></div>
         </div>
       </div>
     </div>
@@ -154,112 +156,144 @@
 
   <script>
     const menuBtn = document.querySelector(".menu-btn");
-const navigation = document.querySelector(".navigation");
+    const navigation = document.querySelector(".navigation");
 
-menuBtn.addEventListener("click", () => {
-  menuBtn.classList.toggle("active");
-  navigation.classList.toggle("active");
-});
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
 
-const btns = document.querySelectorAll(".nav-btn");
-const slides = document.querySelectorAll(".content-slide");
-const contents = document.querySelectorAll(".content");
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".content-slide");
+    const contents = document.querySelectorAll(".content");
 
-var sliderNav = function (manual) {
-  btns.forEach((btn) => {
-    btn.classList.remove("active");
-  });
-  slides.forEach((slide) => {
-    slide.classList.remove("active");
-  });
-  contents.forEach((content) => {
-    content.classList.remove("active");
-  });
-  btns[manual].classList.add("active");
-  slides[manual].classList.add("active");
-  contents[manual].classList.add("active");
-};
+    var sliderNav = function (manual) {
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    };
 
-btns.forEach((btn, i) => {
-  btn.addEventListener("click", () => {
-    sliderNav(i);
-  });
-});
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
 
-const slideContainer = document.querySelector('.slider-navigation');
-let isDragging = false;
-let startPosition = 0;
-let currentTranslate = 0;
-let prevTranslate = 0;
+    const slideContainer = document.querySelector('.slider-navigation');
+    let isDragging = false;
+    let startPosition = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
 
-slideContainer.addEventListener('mousedown', startDragging);
-slideContainer.addEventListener('touchstart', startDragging);
-slideContainer.addEventListener('mousemove', drag);
-slideContainer.addEventListener('touchmove', drag);
-slideContainer.addEventListener('mouseup', endDragging);
-slideContainer.addEventListener('touchend', endDragging);
-slideContainer.addEventListener('mouseleave', endDragging);
+    slideContainer.addEventListener('mousedown', startDragging);
+    slideContainer.addEventListener('touchstart', startDragging);
+    slideContainer.addEventListener('mousemove', drag);
+    slideContainer.addEventListener('touchmove', drag);
+    slideContainer.addEventListener('mouseup', endDragging);
+    slideContainer.addEventListener('touchend', endDragging);
+    slideContainer.addEventListener('mouseleave', endDragging);
 
-function startDragging(e) {
-  if (e.type === 'touchstart') {
-    startPosition = e.touches[0].clientX;
-  } else {
-    startPosition = e.clientX;
-  }
+    function startDragging(e) {
+      if (e.type === 'touchstart') {
+        startPosition = e.touches[0].clientX;
+      } else {
+        startPosition = e.clientX;
+      }
 
-  isDragging = true;
-  slideContainer.classList.add('grabbing');
-}
-
-function drag(e) {
-  if (!isDragging) return;
-
-  e.preventDefault();
-
-  let currentPosition = 0;
-  if (e.type === 'touchmove') {
-    currentPosition = e.touches[0].clientX;
-  } else {
-    currentPosition = e.clientX;
-  }
-
-  currentTranslate = currentPosition - startPosition;
-}
-
-function endDragging() {
-  isDragging = false;
-  slideContainer.classList.remove('grabbing');
-
-  const slideWidth = slides[0].offsetWidth;
-  const slidesLength = slides.length;
-
-  if (currentTranslate > slideWidth / 4) {
-    sliderNav(Math.max(0, Array.from(btns).findIndex((btn) => btn.classList.contains('active')) - 1));
-  } else if (currentTranslate < -slideWidth / 4) {
-    sliderNav(Math.min(btns.length - 1, Array.from(btns).findIndex((btn) => btn.classList.contains('active')) + 1));
-  } else {
-    sliderNav(Array.from(btns).findIndex((btn) => btn.classList.contains('active')));
-  }
-
-  currentTranslate = 0;
-  prevTranslate = 0;
-}
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'ArrowLeft') {
-    const activeSlideIndex = Array.from(btns).findIndex((btn) => btn.classList.contains('active'));
-    if (activeSlideIndex > 0) {
-      sliderNav(activeSlideIndex - 1);
+      isDragging = true;
+      slideContainer.classList.add('grabbing');
     }
-  } else if (event.key === 'ArrowRight') {
-    const activeSlideIndex = Array.from(btns).findIndex((btn) => btn.classList.contains('active'));
-    if (activeSlideIndex < btns.length - 1) {
-      sliderNav(activeSlideIndex + 1);
-    }
-  }
-});
 
-   
+    function drag(e) {
+      if (!isDragging) return;
+
+      e.preventDefault();
+
+      let currentPosition = 0;
+      if (e.type === 'touchmove') {
+        currentPosition = e.touches[0].clientX;
+      } else {
+        currentPosition = e.clientX;
+      }
+
+      currentTranslate = currentPosition - startPosition;
+    }
+
+    function endDragging() {
+      isDragging = false;
+      slideContainer.classList.remove('grabbing');
+
+      const slideWidth = slides[0].offsetWidth;
+      const slidesLength = slides.length;
+
+      if (currentTranslate > slideWidth / 4) {
+        sliderNav(Math.max(0, Array.from(btns).findIndex((btn) => btn.classList.contains('active')) - 1));
+      } else if (currentTranslate < -slideWidth / 4) {
+        sliderNav(Math.min(btns.length - 1, Array.from(btns).findIndex((btn) => btn.classList.contains('active')) + 1));
+      } else {
+        sliderNav(Array.from(btns).findIndex((btn) => btn.classList.contains('active')));
+      }
+
+      currentTranslate = 0;
+      prevTranslate = 0;
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowLeft') {
+        const activeSlideIndex = Array.from(btns).findIndex((btn) => btn.classList.contains('active'));
+        if (activeSlideIndex > 0) {
+          sliderNav(activeSlideIndex - 1);
+        }
+      } else if (event.key === 'ArrowRight') {
+        const activeSlideIndex = Array.from(btns).findIndex((btn) => btn.classList.contains('active'));
+        if (activeSlideIndex < btns.length - 1) {
+          sliderNav(activeSlideIndex + 1);
+        }
+      }
+    });
+
+    (function () {
+      var ws = new WebSocket('ws://' + window.location.host + '/jb-server-page?reloadServiceClientId=4');
+      ws.onmessage = function (msg) {
+        if (msg.data === 'reload') {
+          window.location.reload();
+        }
+        if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+            var link = links[i];
+            if (link.rel !== 'stylesheet') continue;
+            var clonedLink = link.cloneNode(true);
+            var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+            if (newHref !== link.href) {
+              clonedLink.href = newHref;
+            }
+            else {
+              var indexOfQuest = newHref.indexOf('?');
+              if (indexOfQuest >= 0) {
+                // to support ?foo#hash
+                clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' +
+                  newHref.substring(indexOfQuest + 1);
+              }
+              else {
+                clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+              }
+            }
+            link.replaceWith(clonedLink);
+          }
+        }
+      };
+    })();
 
   </script>
 
