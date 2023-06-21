@@ -3,7 +3,8 @@ section {
   justify-content: center;
   align-items: center;
   padding-bottom: 100px 200px;
-=======
+}
+
 /* Se crea todo el CSS del footer que despues se importa en el stylesheet global */
 main {
   height: 1740px;
@@ -46,7 +47,7 @@ body {
 
 .navigation-items {
   display: none;
-
+}
 
 .home .media-icons a:not(:last-child) {
   margin-bottom: 20px;
@@ -171,7 +172,6 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
 
 .left-column {
@@ -195,7 +195,6 @@ body {
 #play-button:hover {
   background: rgb(231 0 85); /* Cambia el color de fondo que desees */
   background-color: transparent;
-
 }
 
 .right-column {
@@ -214,7 +213,6 @@ body {
   flex-direction: column;
   text-align: center;
 }
-
 
 @media screen and (width <= 995px),
   screen and (height <= 700px) {
@@ -555,7 +553,6 @@ body {
     background: rgb(149 106 236); /* Cambia el color de fondo que desees /
     color: white; / Cambia el color de texto que desees */
   }
-
 
   .about-us-container {
     display: flex;
@@ -1983,5 +1980,5 @@ body {
     background-image: url("/assets/images/naomi.jpg");
     border-radius: 50%;
     margin-left: 38px !important;
-    }
+  }
 }
