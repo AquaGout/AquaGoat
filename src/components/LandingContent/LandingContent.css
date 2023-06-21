@@ -1860,7 +1860,7 @@ section {
     width: 750px;
     height: 450px;
     position: sticky;
-    margin-left: 32%;
+    margin-left: 50%;
     overflow: hidden !important;
   }
 
@@ -1879,7 +1879,7 @@ section {
     font-size: 35px;
   }
 
- 
+
   #PlayNow {
     margin-top: 30px;
     margin-left: 380px;
