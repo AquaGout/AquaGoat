@@ -3,6 +3,15 @@ section {
   justify-content: center;
   align-items: center;
   padding-bottom: 100px 200px;
+=======
+/* Se crea todo el CSS del footer que despues se importa en el stylesheet global */
+main {
+  height: 1740px;
+}
+
+body {
+  background-color: transparent;
+  overflow: hidden;
 }
 
 .home {
@@ -37,59 +46,7 @@ section {
 
 .navigation-items {
   display: none;
-}
 
-.home .content {
-  z-index: 888;
-  color: #fff;
-  width: 70%;
-  margin-top: 0;
-  display: none;
-}
-
-.home .content.active {
-  display: block;
-}
-
-.home .content h1 {
-  font-size: 4em;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  line-height: 130px;
-  margin-bottom: 20px;
-}
-
-.home .content h1 span {
-  font-size: 1.2em;
-  font-weight: 600;
-}
-
-.home .content p {
-  margin-bottom: 0;
-  text-align: center;
-  font-size: 20px;
-}
-
-.info-text {
-  margin-top: 300px;
-}
-
-.home .media-icons {
-  z-index: 888;
-  position: absolute;
-  right: 30px;
-  padding: 400px 0 0;
-  display: flex;
-  flex-direction: column;
-  transition: 0.5s ease;
-}
-
-.home .media-icons a {
-  color: #fff;
-  font-size: 1.6em;
-  transition: 0.3s ease;
-}
 
 .home .media-icons a:not(:last-child) {
   margin-bottom: 20px;
@@ -214,12 +171,31 @@ section {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+
 }
 
 .left-column {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+}
+
+#play-button {
+  background: transparent;
+  border: 2px;
+  outline: none;
+  border-radius: 47px;
+  cursor: pointer;
+  color: rgb(3 3 3);
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 35px;
+}
+
+#play-button:hover {
+  background: rgb(231 0 85); /* Cambia el color de fondo que desees */
+  background-color: transparent;
+
 }
 
 .right-column {
@@ -580,9 +556,6 @@ section {
     color: white; / Cambia el color de texto que desees */
   }
 
-  {
-
-  }
 
   .about-us-container {
     display: flex;
@@ -2010,6 +1983,5 @@ section {
     background-image: url("/assets/images/naomi.jpg");
     border-radius: 50%;
     margin-left: 38px !important;
-  }
+    }
 }
-

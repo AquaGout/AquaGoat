@@ -150,26 +150,10 @@ header .navigation .navigation-items a:hover::before {
   outline: none;
   border-radius: 47px;
   cursor: pointer;
-  color: rgb(17, 66, 134);
+  color: rgb(17 66 134);
   font-weight: 500;
   margin-left: 40px;
   transition: 0.5s;
   font-size: 35px;
   font-family: "Richard Samuels", sans-serif;
 }
-
-.navigation a:hover {
-  color: rgb(255 255 255); /* Color predeterminado cuando se hace hover */
-
-/*
-.navigation a:nth-child(1):hover {
-  color: #f9a200; /* Cambia el color del primer enlace cuando se hace hover */
-/* stylelint-disable selector-id-pattern
-#PlayNow:hover {
-  background: rgb(14, 62, 138);
-  color: white;
-}
-
-*/
-
-/* stylelint-disable indentation */
