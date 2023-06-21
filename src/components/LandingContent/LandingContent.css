@@ -1856,11 +1856,10 @@ section {
   }
 
   .how-to-play-video {
-    background-color: red;
     width: 750px;
     height: 450px;
     position: sticky;
-    margin-left: 40%;
+    margin-left: 30%;
     overflow: hidden !important;
   }
 
