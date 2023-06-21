@@ -1860,7 +1860,7 @@ section {
     width: 750px;
     height: 450px;
     position: sticky;
-    margin-left: 50%;
+    margin-left: 40%;
     overflow: hidden !important;
   }
 
@@ -1871,7 +1871,7 @@ section {
     color: #154805 !important;
     width: 300px;
     height: 100px;
-    border: 2px;
+    border:g 2px;
     outline: none;
     border-radius: 47px;
     cursor: pointer;
